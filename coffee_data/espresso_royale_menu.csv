@@ -1,41 +1,41 @@
-Item,Price
-Latte,$3.20+
-Iced Latte,$3.85+
-Mocha,$3.70+
-Iced Mocha,$4.35+
-Cold Brew Grasshopper,$5.00+
-Cold Brew House,$3.50+
-Cold Brew-Charged Coconut Caramel,$4.85+
-Cold Brew-Green,$3.50+
-Cold Brew-Single Origin,$3.50+
-Chai Latte,$3.75+
-Iced Chai Latte,$4.15+
-Ginger Dragon,$3.15+
-Iced Ginger Dragon,$3.85+
-Hot Tea,$2.75+
-Iced Tea,$2.45+
-Hot Chocolate,$2.60+
-Americano,$2.50+
-Iced Americano,$3.15+
-Brewed Coffee,$2.00+
-Vegan Zucchini Nut Bread,$2.65
-Pumpkin Chocolate Chip Bread,$2.65
-Banana Bread,$2.65
-Mint Brownie Bar,$3.00
-7 Layer Bar,$3.00
-Lemon Bar,$3.00
-Peanut Butter Bar,$3.00
-Blueberry Coffee Cake,$3.00
-Raspberry Almond Scone,$2.90
-Cherry Scone,$2.90
-Chocolate Chip Scone,$2.90
-"Bacon, Cracked Pepper and White Cheddar Scone",$2.90
-Cherry Almond Biscotti,$1.75
-Chocolate Walnut Biscotti,$1.75
-Morning Glory Muffin,$2.80
-Chocolate Chip Muffin,$2.80
-No-Fat Bran Muffin,$2.80
-Blueberry Muffin,$2.80
-Apple Cinnamon Muffin,$2.80
-Oatmeal Raisin Cookie,$1.75
-Chocolate Chip Cookie,$1.75
+,Item,Price,Shop
+0,Latte,$3.20+,Espresso Royale
+1,Iced Latte,$3.85+,Espresso Royale
+2,Mocha,$3.70+,Espresso Royale
+3,Iced Mocha,$4.35+,Espresso Royale
+4,Cold Brew Grasshopper,$5.00+,Espresso Royale
+5,Cold Brew House,$3.50+,Espresso Royale
+6,Cold Brew-Charged Coconut Caramel,$4.85+,Espresso Royale
+7,Cold Brew-Green,$3.50+,Espresso Royale
+8,Cold Brew-Single Origin,$3.50+,Espresso Royale
+9,Chai Latte,$3.75+,Espresso Royale
+10,Iced Chai Latte,$4.15+,Espresso Royale
+11,Ginger Dragon,$3.15+,Espresso Royale
+12,Iced Ginger Dragon,$3.85+,Espresso Royale
+13,Hot Tea,$2.75+,Espresso Royale
+14,Iced Tea,$2.45+,Espresso Royale
+15,Hot Chocolate,$2.60+,Espresso Royale
+16,Americano,$2.50+,Espresso Royale
+17,Iced Americano,$3.15+,Espresso Royale
+18,Brewed Coffee,$2.00+,Espresso Royale
+19,Vegan Zucchini Nut Bread,$2.65,Espresso Royale
+20,Pumpkin Chocolate Chip Bread,$2.65,Espresso Royale
+21,Banana Bread,$2.65,Espresso Royale
+22,Mint Brownie Bar,$3.00,Espresso Royale
+23,7 Layer Bar,$3.00,Espresso Royale
+24,Lemon Bar,$3.00,Espresso Royale
+25,Peanut Butter Bar,$3.00,Espresso Royale
+26,Blueberry Coffee Cake,$3.00,Espresso Royale
+27,Raspberry Almond Scone,$2.90,Espresso Royale
+28,Cherry Scone,$2.90,Espresso Royale
+29,Chocolate Chip Scone,$2.90,Espresso Royale
+30,"Bacon, Cracked Pepper and White Cheddar Scone",$2.90,Espresso Royale
+31,Cherry Almond Biscotti,$1.75,Espresso Royale
+32,Chocolate Walnut Biscotti,$1.75,Espresso Royale
+33,Morning Glory Muffin,$2.80,Espresso Royale
+34,Chocolate Chip Muffin,$2.80,Espresso Royale
+35,No-Fat Bran Muffin,$2.80,Espresso Royale
+36,Blueberry Muffin,$2.80,Espresso Royale
+37,Apple Cinnamon Muffin,$2.80,Espresso Royale
+38,Oatmeal Raisin Cookie,$1.75,Espresso Royale
+39,Chocolate Chip Cookie,$1.75,Espresso Royale

@@ -1,70 +1,70 @@
-Item,Price
-Espresso,$1.95+
-Cappuccino,$2.55+
-Macchiato,$2.45+
-Cortado,$2.55+
-Americano,$1.95+
-Cafe Latte,$2.55+
-Cafe Mocha,$2.95+
-White Mocha,$2.95+
-Vanilla Latte,$2.95+
-Caramel Latte Macchiato,$3.25+
-Maple Latte Macchiato,$3.75+
-Spanish Latte,$3.25+
-Brewed Coffee,$1.45+
-Iced Coffee,$1.45+
-Cafe au Lait,$1.95+
-Smoothie,$5.25+
-Green Tea Latte,$3.25+
-Misugaru Latte,$3.95+
-Red Velvet Latte,$4.65+
-Iced Tea,$1.95+
-Chai Tea Latte,$3.25+
-Iced Tea Lemonade,$2.25+
-Caffeinated Premium Whole Leaf Tea,$2.25+
-Non-Caffeinated Premium Whole Leaf Tea,$2.25+
-Hot Chocolate,$3.45+
-Bubble Tea Latte,$3.95+
-Bubble Tea Smoothie,$4.25+
-Coffee Frappe,$2.95+
-Mocha Frappe,$4.95+
-Chocolate Frappe,$3.25+
-Pure Vanilla Frappe,$3.25+
-Green Tea Frappe,$3.25+
-Caramel Cinnamon Misugaru Frappe,$4.95+
-Cranberry Almond Misugaru Frappe,$4.95+
-Plain Misugaru Frappe,$4.45+
-Mojito,$4.25
-Asian Shrimp Sandwich,$5.95
-Ham and Egg Sandwich,$5.95
-Portabella Sandwich,$5.95
-Spicy Chicken Sandwich,$5.95
-Teriyaki Chicken Sandwich,$5.95
-Grilled Cheese,$5.95
-Strawberry Cream Cheese Honey Bread,$7.95
-Caramel Cinnamon Honey Bread,$7.95
-Banana Walnut Honey Bread,$7.95
-Macaron,$1.95+
-Mini Pecan Pie,$4.95
-Cake,$4.95
-Tiramisu Glass,$4.95
-Gelato,$1.95+
-Misugaru Bingsu,$7.95+
-Coffee Bingsu,$7.95+
-Green Tea Bingsu,$8.95+
-Strawberry Bingsu,$7.95+
-Mango Bingsu,$9.25+
-Oreo Bingsu,$7.95+
-Acai Bowl,$7.95
-Original Waffle,$5.95
-Strawberry Waffle,$5.95
-Caramel Banana Waffle,$5.95
-Strawberry Cream Cheese Waffle,$5.95
-Blueberry Waffle,$5.95
-Strawberry Yogurt Waffle,$5.95
-Blueberry Yogurt Waffle,$5.95
-Double Chocolate Muffin,$2.95
-Blueberry Muffin,$2.95
-Banana Muffin,$2.95
-2 LB Bag Black Velvet Coffee Beans,$19.95
-1 Gallon Caffe Bene Coffee To Go,$16.95
+,Item,Price,Shop
+0,Espresso,$1.95+,Cafe Bene
+1,Cappuccino,$2.55+,Cafe Bene
+2,Macchiato,$2.45+,Cafe Bene
+3,Cortado,$2.55+,Cafe Bene
+4,Americano,$1.95+,Cafe Bene
+5,Cafe Latte,$2.55+,Cafe Bene
+6,Cafe Mocha,$2.95+,Cafe Bene
+7,White Mocha,$2.95+,Cafe Bene
+8,Vanilla Latte,$2.95+,Cafe Bene
+9,Caramel Latte Macchiato,$3.25+,Cafe Bene
+10,Maple Latte Macchiato,$3.75+,Cafe Bene
+11,Spanish Latte,$3.25+,Cafe Bene
+12,Brewed Coffee,$1.45+,Cafe Bene
+13,Iced Coffee,$1.45+,Cafe Bene
+14,Cafe au Lait,$1.95+,Cafe Bene
+15,Smoothie,$5.25+,Cafe Bene
+16,Green Tea Latte,$3.25+,Cafe Bene
+17,Misugaru Latte,$3.95+,Cafe Bene
+18,Red Velvet Latte,$4.65+,Cafe Bene
+19,Iced Tea,$1.95+,Cafe Bene
+20,Chai Tea Latte,$3.25+,Cafe Bene
+21,Iced Tea Lemonade,$2.25+,Cafe Bene
+22,Caffeinated Premium Whole Leaf Tea,$2.25+,Cafe Bene
+23,Non-Caffeinated Premium Whole Leaf Tea,$2.25+,Cafe Bene
+24,Hot Chocolate,$3.45+,Cafe Bene
+25,Bubble Tea Latte,$3.95+,Cafe Bene
+26,Bubble Tea Smoothie,$4.25+,Cafe Bene
+27,Coffee Frappe,$2.95+,Cafe Bene
+28,Mocha Frappe,$4.95+,Cafe Bene
+29,Chocolate Frappe,$3.25+,Cafe Bene
+30,Pure Vanilla Frappe,$3.25+,Cafe Bene
+31,Green Tea Frappe,$3.25+,Cafe Bene
+32,Caramel Cinnamon Misugaru Frappe,$4.95+,Cafe Bene
+33,Cranberry Almond Misugaru Frappe,$4.95+,Cafe Bene
+34,Plain Misugaru Frappe,$4.45+,Cafe Bene
+35,Mojito,$4.25,Cafe Bene
+36,Asian Shrimp Sandwich,$5.95,Cafe Bene
+37,Ham and Egg Sandwich,$5.95,Cafe Bene
+38,Portabella Sandwich,$5.95,Cafe Bene
+39,Spicy Chicken Sandwich,$5.95,Cafe Bene
+40,Teriyaki Chicken Sandwich,$5.95,Cafe Bene
+41,Grilled Cheese,$5.95,Cafe Bene
+42,Strawberry Cream Cheese Honey Bread,$7.95,Cafe Bene
+43,Caramel Cinnamon Honey Bread,$7.95,Cafe Bene
+44,Banana Walnut Honey Bread,$7.95,Cafe Bene
+45,Macaron,$1.95+,Cafe Bene
+46,Mini Pecan Pie,$4.95,Cafe Bene
+47,Cake,$4.95,Cafe Bene
+48,Tiramisu Glass,$4.95,Cafe Bene
+49,Gelato,$1.95+,Cafe Bene
+50,Misugaru Bingsu,$7.95+,Cafe Bene
+51,Coffee Bingsu,$7.95+,Cafe Bene
+52,Green Tea Bingsu,$8.95+,Cafe Bene
+53,Strawberry Bingsu,$7.95+,Cafe Bene
+54,Mango Bingsu,$9.25+,Cafe Bene
+55,Oreo Bingsu,$7.95+,Cafe Bene
+56,Acai Bowl,$7.95,Cafe Bene
+57,Original Waffle,$5.95,Cafe Bene
+58,Strawberry Waffle,$5.95,Cafe Bene
+59,Caramel Banana Waffle,$5.95,Cafe Bene
+60,Strawberry Cream Cheese Waffle,$5.95,Cafe Bene
+61,Blueberry Waffle,$5.95,Cafe Bene
+62,Strawberry Yogurt Waffle,$5.95,Cafe Bene
+63,Blueberry Yogurt Waffle,$5.95,Cafe Bene
+64,Double Chocolate Muffin,$2.95,Cafe Bene
+65,Blueberry Muffin,$2.95,Cafe Bene
+66,Banana Muffin,$2.95,Cafe Bene
+67,2 LB Bag Black Velvet Coffee Beans,$19.95,Cafe Bene
+68,1 Gallon Caffe Bene Coffee To Go,$16.95,Cafe Bene
