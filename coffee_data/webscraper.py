@@ -4,6 +4,7 @@
 from bs4 import BeautifulSoup 
 import requests
 import csv
+import pandas as pd
 
 # Function that takes in a url and file name
 def menu_scraper(url, file_name):
@@ -24,9 +25,38 @@ def menu_scraper(url, file_name):
         price = rows[i+1].text.strip()
         writer.writerow([item, price])
 
-
 # Web Scraping Coffee Menus from: Espresso Royale, Cafe Bene, Cafe Kopi, and Brew Lab
 menu_scraper('https://www.allmenus.com/il/champaign/839482-espresso-royale/menu/', 'espresso_royale_menu.csv')
 menu_scraper('https://www.allmenus.com/il/urbana/760257-caffe-bene/menu/', 'cafe_bene_menu.csv')
 menu_scraper('https://www.allmenus.com/il/champaign/254661-cafe-kopi/menu/', 'cafe_kopi_menu.csv')
 menu_scraper('https://www.allmenus.com/il/champaign/757433-brewlab-coffee/menu/', 'brew_lab_menu.csv')
+
+# Function to append shop name next to every row in CSV file
+def append_shop_to_csv(file_name, shop):
+  csv_input = pd.read_csv(file_name, on_bad_lines='skip')
+  csv_input['Shop'] = shop
+  csv_input.to_csv(file_name)
+
+append_shop_to_csv('espresso_royale_menu.csv', 'Espresso Royale')
+append_shop_to_csv('cafe_bene_menu.csv', 'Cafe Bene')
+append_shop_to_csv('cafe_kopi_menu.csv', 'Cafe Kopi')
+append_shop_to_csv('brew_lab_menu.csv', 'Brew Lab')
+
+# Open all 4 menus in order to merge into one
+espresso_df = pd.read_csv('espresso_royale_menu.csv')
+bene_df = pd.read_csv('cafe_bene_menu.csv')
+kopi_df = pd.read_csv('cafe_kopi_menu.csv')
+brew_df = pd.read_csv('brew_lab_menu.csv')
+
+# Removing the + next to prices for consistency
+espresso_df['Price'] = espresso_df['Price'].str.replace("+", "",regex=False)
+bene_df['Price'] = espresso_df['Price'].str.replace("+", "",regex=False)
+
+# Concatenate the 4 dataframes into a single dataframe
+merged_df = pd.concat([espresso_df, bene_df, kopi_df, brew_df])
+
+
+del merged_df['Unnamed: 0']
+
+# Write the merged dataframe to a new CSV file
+merged_df.to_csv('champaign_coffee_menus.csv', index=False)
