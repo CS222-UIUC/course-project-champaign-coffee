@@ -1,84 +1,256 @@
 Item,Price,Shop
-Latte,$3.20,Espresso Royale
-Iced Latte,$3.85,Espresso Royale
-Mocha,$3.70,Espresso Royale
-Iced Mocha,$4.35,Espresso Royale
-Cold Brew Grasshopper,$5.00,Espresso Royale
-Cold Brew House,$3.50,Espresso Royale
-Cold Brew-Charged Coconut Caramel,$4.85,Espresso Royale
-Cold Brew-Green,$3.50,Espresso Royale
-Cold Brew-Single Origin,$3.50,Espresso Royale
-Chai Latte,$3.75,Espresso Royale
-Iced Chai Latte,$4.15,Espresso Royale
-Ginger Dragon,$3.15,Espresso Royale
-Iced Ginger Dragon,$3.85,Espresso Royale
-Hot Tea,$2.75,Espresso Royale
-Iced Tea,$2.45,Espresso Royale
-Hot Chocolate,$2.60,Espresso Royale
-Americano,$2.50,Espresso Royale
-Iced Americano,$3.15,Espresso Royale
-Brewed Coffee,$2.00,Espresso Royale
-Vegan Zucchini Nut Bread,$2.65,Espresso Royale
-Pumpkin Chocolate Chip Bread,$2.65,Espresso Royale
-Banana Bread,$2.65,Espresso Royale
-Mint Brownie Bar,$3.00,Espresso Royale
-7 Layer Bar,$3.00,Espresso Royale
-Lemon Bar,$3.00,Espresso Royale
-Peanut Butter Bar,$3.00,Espresso Royale
-Blueberry Coffee Cake,$3.00,Espresso Royale
-Raspberry Almond Scone,$2.90,Espresso Royale
-Cherry Scone,$2.90,Espresso Royale
-Chocolate Chip Scone,$2.90,Espresso Royale
-"Bacon, Cracked Pepper and White Cheddar Scone",$2.90,Espresso Royale
-Cherry Almond Biscotti,$1.75,Espresso Royale
-Chocolate Walnut Biscotti,$1.75,Espresso Royale
-Morning Glory Muffin,$2.80,Espresso Royale
-Chocolate Chip Muffin,$2.80,Espresso Royale
-No-Fat Bran Muffin,$2.80,Espresso Royale
-Blueberry Muffin,$2.80,Espresso Royale
-Apple Cinnamon Muffin,$2.80,Espresso Royale
-Oatmeal Raisin Cookie,$1.75,Espresso Royale
-Chocolate Chip Cookie,$1.75,Espresso Royale
-Espresso,$3.20,Cafe Bene
-Cappuccino,$3.85,Cafe Bene
-Macchiato,$3.70,Cafe Bene
-Cortado,$4.35,Cafe Bene
-Americano,$5.00,Cafe Bene
-Cafe Latte,$3.50,Cafe Bene
-Cafe Mocha,$4.85,Cafe Bene
-White Mocha,$3.50,Cafe Bene
-Vanilla Latte,$3.50,Cafe Bene
-Caramel Latte Macchiato,$3.75,Cafe Bene
-Maple Latte Macchiato,$4.15,Cafe Bene
-Spanish Latte,$3.15,Cafe Bene
-Brewed Coffee,$3.85,Cafe Bene
-Iced Coffee,$2.75,Cafe Bene
-Cafe au Lait,$2.45,Cafe Bene
-Smoothie,$2.60,Cafe Bene
-Green Tea Latte,$2.50,Cafe Bene
-Misugaru Latte,$3.15,Cafe Bene
-Red Velvet Latte,$2.00,Cafe Bene
-Iced Tea,$2.65,Cafe Bene
-Chai Tea Latte,$2.65,Cafe Bene
-Iced Tea Lemonade,$2.65,Cafe Bene
-Caffeinated Premium Whole Leaf Tea,$3.00,Cafe Bene
-Non-Caffeinated Premium Whole Leaf Tea,$3.00,Cafe Bene
-Hot Chocolate,$3.00,Cafe Bene
-Bubble Tea Latte,$3.00,Cafe Bene
-Bubble Tea Smoothie,$3.00,Cafe Bene
-Coffee Frappe,$2.90,Cafe Bene
-Mocha Frappe,$2.90,Cafe Bene
-Chocolate Frappe,$2.90,Cafe Bene
-Pure Vanilla Frappe,$2.90,Cafe Bene
-Green Tea Frappe,$1.75,Cafe Bene
-Caramel Cinnamon Misugaru Frappe,$1.75,Cafe Bene
-Cranberry Almond Misugaru Frappe,$2.80,Cafe Bene
-Plain Misugaru Frappe,$2.80,Cafe Bene
-Mojito,$2.80,Cafe Bene
-Asian Shrimp Sandwich,$2.80,Cafe Bene
-Ham and Egg Sandwich,$2.80,Cafe Bene
-Portabella Sandwich,$1.75,Cafe Bene
-Spicy Chicken Sandwich,$1.75,Cafe Bene
+Cold Brew Coffee,3.20,Cafe Kopi
+Americano,3.85,Cafe Kopi
+Cafe au Lait,3.70,Cafe Kopi
+Cafe Latte,4.35,Cafe Kopi
+Cafe Mocha,5.00,Cafe Kopi
+Cafe White Mocha,3.50,Cafe Kopi
+Cafe Caramel,4.85,Cafe Kopi
+Cafe Miel,3.50,Cafe Kopi
+Brewed Coffee,3.50,Cafe Kopi
+Cappuccino,3.75,Cafe Kopi
+Kopi Signature Cappuccino,4.15,Cafe Kopi
+Whole Bean Coffee,3.15,Cafe Kopi
+Mocha Cold Brew,3.85,Cafe Kopi
+Nutty Irishman,2.75,Cafe Kopi
+Cold Pressed Horchata,2.45,Cafe Kopi
+Caramel Cold Brew,2.60,Cafe Kopi
+Cold Press Pumpkin Spice,2.50,Cafe Kopi
+Campfire Mocha,3.15,Cafe Kopi
+Pumpkin Spice Latte,2.00,Cafe Kopi
+Apple Cinnamon Muffin,2.65,Cafe Kopi
+Blueberry Scone,2.65,Cafe Kopi
+Raspberry Almond scone,2.65,Cafe Kopi
+Bagel D-Lux,3.00,Cafe Kopi
+Smoked Pepper Egg Bagel,3.00,Cafe Kopi
+Brooklyn Egg Bagel,3.00,Cafe Kopi
+"Sausage, Egg, & Cheese",3.00,Cafe Kopi
+Plain Bagel,3.00,Cafe Kopi
+Sesame Bagel,2.90,Cafe Kopi
+Wheat Bagel,2.90,Cafe Kopi
+Everything Bagel,2.90,Cafe Kopi
+"Blueberry, Granola, Yogurt parfait",2.90,Cafe Kopi
+Blueberry Muffin,1.75,Cafe Kopi
+Chocolate Chip Muffin,1.75,Cafe Kopi
+Ginger Lemon scone,2.80,Cafe Kopi
+Cinnamon Roll,2.80,Cafe Kopi
+Almond Croissant,2.80,Cafe Kopi
+Butter Croissant,2.80,Cafe Kopi
+Mini Yogurt Parfait,2.80,Cafe Kopi
+The Sunrise,1.75,Cafe Kopi
+Tequila Sunrise,1.75,Cafe Kopi
+The Awakening,,Cafe Kopi
+The Veggie,,Cafe Kopi
+Grilled Turkey Pesto Panini,,Cafe Kopi
+Tuna Melt with Bacon Panini,,Cafe Kopi
+Ham and Swiss Panini,,Cafe Kopi
+Chai tea Latte 16 oz.,,Cafe Kopi
+Matcha Green Tea Latte 16 oz.,,Cafe Kopi
+Red Latte 16 oz.,,Cafe Kopi
+Yerba Mate Latte 16 oz.,,Cafe Kopi
+London Fog 16 oz.,,Cafe Kopi
+Russian Lullaby 16 oz.,,Cafe Kopi
+Chamomile Tea Latte 16 oz.,,Cafe Kopi
+Gingerbread Chai Latte 16 oz.,,Cafe Kopi
+Chai Bomb 16 oz.,,Cafe Kopi
+Pumpkin Pie Chai,,Cafe Kopi
+Turkey and Brie Sandwich,,Cafe Kopi
+Goat Cheese Crostini,,Cafe Kopi
+Turkey and Gruyere Sandwich,,Cafe Kopi
+Mediterranean Sandwich,,Cafe Kopi
+Toasted Cheese without Tomatoes Sandwich,,Cafe Kopi
+Toasted Cheese with Tomatoes Sandwich,,Cafe Kopi
+Cool Ham Cuke Sandwich,,Cafe Kopi
+Fresh Mozzarella Sandwich,,Cafe Kopi
+Kopi BLT,,Cafe Kopi
+Key Lime Pie Slice,,Cafe Kopi
+Tiramisu Slice,,Cafe Kopi
+Apple Streusel Pie slice,,Cafe Kopi
+Strawberry Rhubarb Pie slice,,Cafe Kopi
+Chocolate Chip cookie,,Cafe Kopi
+Oatmeal Raisin cookie,,Cafe Kopi
+Snickerdoodle cookie,,Cafe Kopi
+Frosted Lemon cookie,,Cafe Kopi
+Frosted Sugar cookie,,Cafe Kopi
+Ginger Spice cookie,,Cafe Kopi
+Princess cookie,,Cafe Kopi
+Brownie,,Cafe Kopi
+"Biscotti, almond anise (1)",,Cafe Kopi
+3-cookie cup (lemon),,Cafe Kopi
+Vegan cookie (Alternative Baking Co.),,Cafe Kopi
+Gluten Free cookies (Alternative Baking Co.),,Cafe Kopi
+Lucy's gluten free cookies,,Cafe Kopi
+Cheesecake Parfait,,Cafe Kopi
+Tuna Salad Pita,,Cafe Kopi
+Curried Egg Salad Pita,,Cafe Kopi
+Matty Pooh Hummus Pita (vegan),,Cafe Kopi
+Chicken Salad Pita,,Cafe Kopi
+Southwest Turkey Bacon Ranch Wrap,,Cafe Kopi
+Peppermint Hot Cocoa,,Cafe Kopi
+Aztec Hot Cocoa,,Cafe Kopi
+Orange Hot Cocoa,,Cafe Kopi
+Nutella Hot Cocoa,,Cafe Kopi
+Pumpkin Spice Hot Cocoa,,Cafe Kopi
+Caramel Hot Cocoa,,Cafe Kopi
+Vanilla Frappe',,Cafe Kopi
+Mocha Frappe',,Cafe Kopi
+Caramel Frappe',,Cafe Kopi
+Hazelnut Frappe',,Cafe Kopi
+Chocolate Peanut Butter Frappe',,Cafe Kopi
+Frozen Chai,,Cafe Kopi
+Matcha Green Tea Frappe',,Cafe Kopi
+Frozen Hot Chocolate,,Cafe Kopi
+Strawberry Smoothie,,Cafe Kopi
+Peach-Pear Smoothie,,Cafe Kopi
+Mango-Pineapple Smoothie,,Cafe Kopi
+Strawberry Banana Smoothie,,Cafe Kopi
+Rosemary Flatbread & Hummus bento,,Cafe Kopi
+"Salami, Mozz, & Kalamata Olive bento",,Cafe Kopi
+"Brie, crackers & grapes",,Cafe Kopi
+"White Cheddar, crackers & grapes",,Cafe Kopi
+Lemon Square,,Cafe Kopi
+Pumpkin tea bread slice,,Cafe Kopi
+Cranberry Walnut tea bread slice,,Cafe Kopi
+Dried mango slices,,Cafe Kopi
+Ginger trail mix,,Cafe Kopi
+Chocolate Nut Crunch mix,,Cafe Kopi
+Tamari almonds,,Cafe Kopi
+Chocolate covered espresso beans,,Cafe Kopi
+Chocolate candied orange peel,,Cafe Kopi
+Chocolate covered crystallized ginger,,Cafe Kopi
+Kettle chips,,Cafe Kopi
+Pirate Booty,,Cafe Kopi
+Skinny Pop,,Cafe Kopi
+Sweet Potato tortilla chips (Food Should Taste Good),,Cafe Kopi
+Multigrain tortilla chips (Food Should Taste Good),,Cafe Kopi
+Can of soda pop,,Cafe Kopi
+Can of Bubly sparkling water,,Cafe Kopi
+Bottle of water,,Cafe Kopi
+Bottle of S. Pellegrino mineral water,,Cafe Kopi
+Ocean Spray cranberry juice cocktail,,Cafe Kopi
+Everfresh pineapple juice,,Cafe Kopi
+Alo Exposed juice,,Cafe Kopi
+Jones soda,,Cafe Kopi
+Apple & Eve grape juice box,,Cafe Kopi
+Vita Coco coconut water,,Cafe Kopi
+San Pellegrino sparkling juice,,Cafe Kopi
+Vita Ice sparkling water,,Cafe Kopi
+Horizon organic chocolate milk,,Cafe Kopi
+Monster energy drink,,Cafe Kopi
+Minute Maid orange juice,,Cafe Kopi
+Minute Maid apple juice,,Cafe Kopi
+"Ham, Swiss, & Egg",,Cafe Kopi
+"Goat Cheese, Pepper, & Egg",,Cafe Kopi
+Monte Cristo,,Cafe Kopi
+Blueberries n' Cream,,Cafe Kopi
+The Elvis,,Cafe Kopi
+Black Tea,,Cafe Kopi
+Green tea,,Cafe Kopi
+White Tea,,Cafe Kopi
+Decaf Tea,,Cafe Kopi
+Herbal Tea,,Cafe Kopi
+Hot Chocolate,,Cafe Kopi
+Blackberry Iced Tea,,Cafe Kopi
+Organic Green Iced Tea,,Cafe Kopi
+Fresh Lemonade,,Cafe Kopi
+Sweet Lemon Iced Tea,,Cafe Kopi
+Hot Apple Cider,,Cafe Kopi
+Caramel Apple Cider,,Cafe Kopi
+Steamer,,Cafe Kopi
+Italian Soda,,Cafe Kopi
+French soda,,Cafe Kopi
+Wild Lemonade,,Cafe Kopi
+Tropical Palmer,,Cafe Kopi
+Caramel Chaider,,Cafe Kopi
+Baby Greens Salad,,Cafe Kopi
+Tuna Salad on Baby Greens,,Cafe Kopi
+Chicken Salad on Baby Greens,,Cafe Kopi
+Goat Cheese Salad,,Cafe Kopi
+Egg Salad on Baby Greens,,Cafe Kopi
+Container of Tuna Salad,,Cafe Kopi
+Container of Curried Egg Salad,,Cafe Kopi
+Lavender Honey Latte,,Cafe Kopi
+Butter Beer Latte,,Cafe Kopi
+Latte,3.20,Espresso Royale
+Iced Latte,3.85,Espresso Royale
+Mocha,3.70,Espresso Royale
+Iced Mocha,4.35,Espresso Royale
+Cold Brew Grasshopper,5.00,Espresso Royale
+Cold Brew House,3.50,Espresso Royale
+Cold Brew-Charged Coconut Caramel,4.85,Espresso Royale
+Cold Brew-Green,3.50,Espresso Royale
+Cold Brew-Single Origin,3.50,Espresso Royale
+Chai Latte,3.75,Espresso Royale
+Iced Chai Latte,4.15,Espresso Royale
+Ginger Dragon,3.15,Espresso Royale
+Iced Ginger Dragon,3.85,Espresso Royale
+Hot Tea,2.75,Espresso Royale
+Iced Tea,2.45,Espresso Royale
+Hot Chocolate,2.60,Espresso Royale
+Americano,2.50,Espresso Royale
+Iced Americano,3.15,Espresso Royale
+Brewed Coffee,2.00,Espresso Royale
+Vegan Zucchini Nut Bread,2.65,Espresso Royale
+Pumpkin Chocolate Chip Bread,2.65,Espresso Royale
+Banana Bread,2.65,Espresso Royale
+Mint Brownie Bar,3.00,Espresso Royale
+7 Layer Bar,3.00,Espresso Royale
+Lemon Bar,3.00,Espresso Royale
+Peanut Butter Bar,3.00,Espresso Royale
+Blueberry Coffee Cake,3.00,Espresso Royale
+Raspberry Almond Scone,2.90,Espresso Royale
+Cherry Scone,2.90,Espresso Royale
+Chocolate Chip Scone,2.90,Espresso Royale
+"Bacon, Cracked Pepper and White Cheddar Scone",2.90,Espresso Royale
+Cherry Almond Biscotti,1.75,Espresso Royale
+Chocolate Walnut Biscotti,1.75,Espresso Royale
+Morning Glory Muffin,2.80,Espresso Royale
+Chocolate Chip Muffin,2.80,Espresso Royale
+No-Fat Bran Muffin,2.80,Espresso Royale
+Blueberry Muffin,2.80,Espresso Royale
+Apple Cinnamon Muffin,2.80,Espresso Royale
+Oatmeal Raisin Cookie,1.75,Espresso Royale
+Chocolate Chip Cookie,1.75,Espresso Royale
+Espresso,3.20,Cafe Bene
+Cappuccino,3.85,Cafe Bene
+Macchiato,3.70,Cafe Bene
+Cortado,4.35,Cafe Bene
+Americano,5.00,Cafe Bene
+Cafe Latte,3.50,Cafe Bene
+Cafe Mocha,4.85,Cafe Bene
+White Mocha,3.50,Cafe Bene
+Vanilla Latte,3.50,Cafe Bene
+Caramel Latte Macchiato,3.75,Cafe Bene
+Maple Latte Macchiato,4.15,Cafe Bene
+Spanish Latte,3.15,Cafe Bene
+Brewed Coffee,3.85,Cafe Bene
+Iced Coffee,2.75,Cafe Bene
+Cafe au Lait,2.45,Cafe Bene
+Smoothie,2.60,Cafe Bene
+Green Tea Latte,2.50,Cafe Bene
+Misugaru Latte,3.15,Cafe Bene
+Red Velvet Latte,2.00,Cafe Bene
+Iced Tea,2.65,Cafe Bene
+Chai Tea Latte,2.65,Cafe Bene
+Iced Tea Lemonade,2.65,Cafe Bene
+Caffeinated Premium Whole Leaf Tea,3.00,Cafe Bene
+Non-Caffeinated Premium Whole Leaf Tea,3.00,Cafe Bene
+Hot Chocolate,3.00,Cafe Bene
+Bubble Tea Latte,3.00,Cafe Bene
+Bubble Tea Smoothie,3.00,Cafe Bene
+Coffee Frappe,2.90,Cafe Bene
+Mocha Frappe,2.90,Cafe Bene
+Chocolate Frappe,2.90,Cafe Bene
+Pure Vanilla Frappe,2.90,Cafe Bene
+Green Tea Frappe,1.75,Cafe Bene
+Caramel Cinnamon Misugaru Frappe,1.75,Cafe Bene
+Cranberry Almond Misugaru Frappe,2.80,Cafe Bene
+Plain Misugaru Frappe,2.80,Cafe Bene
+Mojito,2.80,Cafe Bene
+Asian Shrimp Sandwich,2.80,Cafe Bene
+Ham and Egg Sandwich,2.80,Cafe Bene
+Portabella Sandwich,1.75,Cafe Bene
+Spicy Chicken Sandwich,1.75,Cafe Bene
 Teriyaki Chicken Sandwich,,Cafe Bene
 Grilled Cheese,,Cafe Bene
 Strawberry Cream Cheese Honey Bread,,Cafe Bene
@@ -108,194 +280,22 @@ Blueberry Muffin,,Cafe Bene
 Banana Muffin,,Cafe Bene
 2 LB Bag Black Velvet Coffee Beans,,Cafe Bene
 1 Gallon Caffe Bene Coffee To Go,,Cafe Bene
-Cold Brew Coffee,$3.40,Cafe Kopi
-Americano,$3.00,Cafe Kopi
-Cafe au Lait,$3.00,Cafe Kopi
-Cafe Latte,$3.75,Cafe Kopi
-Cafe Mocha,$4.25,Cafe Kopi
-Cafe White Mocha,$4.25,Cafe Kopi
-Cafe Caramel,$4.50,Cafe Kopi
-Cafe Miel,$4.00,Cafe Kopi
-Brewed Coffee,$2.50,Cafe Kopi
-Cappuccino,$3.75,Cafe Kopi
-Kopi Signature Cappuccino,$3.50,Cafe Kopi
-Whole Bean Coffee,$12.00,Cafe Kopi
-Mocha Cold Brew,$4.65,Cafe Kopi
-Nutty Irishman,$3.75,Cafe Kopi
-Cold Pressed Horchata,$4.65,Cafe Kopi
-Caramel Cold Brew,$4.65,Cafe Kopi
-Cold Press Pumpkin Spice,$4.65,Cafe Kopi
-Campfire Mocha,$4.65,Cafe Kopi
-Pumpkin Spice Latte,$4.50,Cafe Kopi
-Apple Cinnamon Muffin,$3.50,Cafe Kopi
-Blueberry Scone,$2.95,Cafe Kopi
-Raspberry Almond scone,$2.95,Cafe Kopi
-Bagel D-Lux,$6.75,Cafe Kopi
-Smoked Pepper Egg Bagel,$5.95,Cafe Kopi
-Brooklyn Egg Bagel,$5.95,Cafe Kopi
-"Sausage, Egg, & Cheese",$5.95,Cafe Kopi
-Plain Bagel,$1.50,Cafe Kopi
-Sesame Bagel,$1.50,Cafe Kopi
-Wheat Bagel,$1.50,Cafe Kopi
-Everything Bagel,$1.50,Cafe Kopi
-"Blueberry, Granola, Yogurt parfait",$4.10,Cafe Kopi
-Blueberry Muffin,$3.50,Cafe Kopi
-Chocolate Chip Muffin,$3.50,Cafe Kopi
-Ginger Lemon scone,$2.95,Cafe Kopi
-Cinnamon Roll,$3.95,Cafe Kopi
-Almond Croissant,$3.50,Cafe Kopi
-Butter Croissant,$2.90,Cafe Kopi
-Mini Yogurt Parfait,$2.99,Cafe Kopi
-The Sunrise,$5.95,Cafe Kopi
-Tequila Sunrise,$5.95,Cafe Kopi
-The Awakening,$5.95,Cafe Kopi
-The Veggie,$5.95,Cafe Kopi
-Grilled Turkey Pesto Panini,$7.95,Cafe Kopi
-Tuna Melt with Bacon Panini,$7.95,Cafe Kopi
-Ham and Swiss Panini,$7.95,Cafe Kopi
-Chai tea Latte 16 oz.,$4.00,Cafe Kopi
-Matcha Green Tea Latte 16 oz.,$4.00,Cafe Kopi
-Red Latte 16 oz.,$4.00,Cafe Kopi
-Yerba Mate Latte 16 oz.,$4.00,Cafe Kopi
-London Fog 16 oz.,$4.00,Cafe Kopi
-Russian Lullaby 16 oz.,$4.00,Cafe Kopi
-Chamomile Tea Latte 16 oz.,$4.00,Cafe Kopi
-Gingerbread Chai Latte 16 oz.,$4.00,Cafe Kopi
-Chai Bomb 16 oz.,$4.70,Cafe Kopi
-Pumpkin Pie Chai,$4.00,Cafe Kopi
-Turkey and Brie Sandwich,$7.50,Cafe Kopi
-Goat Cheese Crostini,$7.50,Cafe Kopi
-Turkey and Gruyere Sandwich,$7.50,Cafe Kopi
-Mediterranean Sandwich,$7.50,Cafe Kopi
-Toasted Cheese without Tomatoes Sandwich,$7.00,Cafe Kopi
-Toasted Cheese with Tomatoes Sandwich,$7.50,Cafe Kopi
-Cool Ham Cuke Sandwich,$7.50,Cafe Kopi
-Fresh Mozzarella Sandwich,$7.50,Cafe Kopi
-Kopi BLT,$7.50,Cafe Kopi
-Key Lime Pie Slice,$3.95,Cafe Kopi
-Tiramisu Slice,$3.95,Cafe Kopi
-Apple Streusel Pie slice,$4.25,Cafe Kopi
-Strawberry Rhubarb Pie slice,$4.25,Cafe Kopi
-Chocolate Chip cookie,$1.95,Cafe Kopi
-Oatmeal Raisin cookie,$1.95,Cafe Kopi
-Snickerdoodle cookie,$1.95,Cafe Kopi
-Frosted Lemon cookie,$1.95,Cafe Kopi
-Frosted Sugar cookie,$0.95,Cafe Kopi
-Ginger Spice cookie,$0.95,Cafe Kopi
-Princess cookie,$0.95,Cafe Kopi
-Brownie,$2.25,Cafe Kopi
-"Biscotti, almond anise (1)",$2.35,Cafe Kopi
-3-cookie cup (lemon),$2.75,Cafe Kopi
-Vegan cookie (Alternative Baking Co.),$3.25,Cafe Kopi
-Gluten Free cookies (Alternative Baking Co.),$2.75,Cafe Kopi
-Lucy's gluten free cookies,$2.25,Cafe Kopi
-Cheesecake Parfait,$2.99,Cafe Kopi
-Tuna Salad Pita,$7.95,Cafe Kopi
-Curried Egg Salad Pita,$7.50,Cafe Kopi
-Matty Pooh Hummus Pita (vegan),$7.00,Cafe Kopi
-Chicken Salad Pita,$7.90,Cafe Kopi
-Southwest Turkey Bacon Ranch Wrap,$7.95,Cafe Kopi
-Peppermint Hot Cocoa,$4.00,Cafe Kopi
-Aztec Hot Cocoa,$4.00,Cafe Kopi
-Orange Hot Cocoa,$4.00,Cafe Kopi
-Nutella Hot Cocoa,$4.00,Cafe Kopi
-Pumpkin Spice Hot Cocoa,$4.00,Cafe Kopi
-Caramel Hot Cocoa,$4.00,Cafe Kopi
-Vanilla Frappe',$5.25,Cafe Kopi
-Mocha Frappe',$5.25,Cafe Kopi
-Caramel Frappe',$5.25,Cafe Kopi
-Hazelnut Frappe',$5.25,Cafe Kopi
-Chocolate Peanut Butter Frappe',$6.00,Cafe Kopi
-Frozen Chai,$5.25,Cafe Kopi
-Matcha Green Tea Frappe',$5.25,Cafe Kopi
-Frozen Hot Chocolate,$5.25,Cafe Kopi
-Strawberry Smoothie,$5.25,Cafe Kopi
-Peach-Pear Smoothie,$5.25,Cafe Kopi
-Mango-Pineapple Smoothie,$5.25,Cafe Kopi
-Strawberry Banana Smoothie,$5.25,Cafe Kopi
-Rosemary Flatbread & Hummus bento,$3.50,Cafe Kopi
-"Salami, Mozz, & Kalamata Olive bento",$3.95,Cafe Kopi
-"Brie, crackers & grapes",$3.95,Cafe Kopi
-"White Cheddar, crackers & grapes",$3.95,Cafe Kopi
-Lemon Square,$2.95,Cafe Kopi
-Pumpkin tea bread slice,$2.95,Cafe Kopi
-Cranberry Walnut tea bread slice,$2.95,Cafe Kopi
-Dried mango slices,$2.50,Cafe Kopi
-Ginger trail mix,$3.50,Cafe Kopi
-Chocolate Nut Crunch mix,$4.25,Cafe Kopi
-Tamari almonds,$3.95,Cafe Kopi
-Chocolate covered espresso beans,$2.25,Cafe Kopi
-Chocolate candied orange peel,$2.25,Cafe Kopi
-Chocolate covered crystallized ginger,$2.25,Cafe Kopi
-Kettle chips,$2.25,Cafe Kopi
-Pirate Booty,$2.25,Cafe Kopi
-Skinny Pop,$1.50,Cafe Kopi
-Sweet Potato tortilla chips (Food Should Taste Good),$1.85,Cafe Kopi
-Multigrain tortilla chips (Food Should Taste Good),$1.85,Cafe Kopi
-Can of soda pop,$1.25,Cafe Kopi
-Can of Bubly sparkling water,$1.25,Cafe Kopi
-Bottle of water,$1.50,Cafe Kopi
-Bottle of S. Pellegrino mineral water,$2.25,Cafe Kopi
-Ocean Spray cranberry juice cocktail,$2.50,Cafe Kopi
-Everfresh pineapple juice,$2.25,Cafe Kopi
-Alo Exposed juice,$3.50,Cafe Kopi
-Jones soda,$2.25,Cafe Kopi
-Apple & Eve grape juice box,$1.35,Cafe Kopi
-Vita Coco coconut water,$3.50,Cafe Kopi
-San Pellegrino sparkling juice,$2.25,Cafe Kopi
-Vita Ice sparkling water,$2.25,Cafe Kopi
-Horizon organic chocolate milk,$2.25,Cafe Kopi
-Monster energy drink,$3.00,Cafe Kopi
-Minute Maid orange juice,$1.75,Cafe Kopi
-Minute Maid apple juice,$1.75,Cafe Kopi
-"Ham, Swiss, & Egg",$5.95,Cafe Kopi
-"Goat Cheese, Pepper, & Egg",$5.95,Cafe Kopi
-Monte Cristo,$5.95,Cafe Kopi
-Blueberries n' Cream,$5.95,Cafe Kopi
-The Elvis,$5.95,Cafe Kopi
-Black Tea,$2.75,Cafe Kopi
-Green tea,$2.75,Cafe Kopi
-White Tea,$2.75,Cafe Kopi
-Decaf Tea,$2.75,Cafe Kopi
-Herbal Tea,$2.75,Cafe Kopi
-Hot Chocolate,$3.25,Cafe Kopi
-Blackberry Iced Tea,$2.00,Cafe Kopi
-Organic Green Iced Tea,$2.00,Cafe Kopi
-Fresh Lemonade,$3.00,Cafe Kopi
-Sweet Lemon Iced Tea,$2.75,Cafe Kopi
-Hot Apple Cider,$3.75,Cafe Kopi
-Caramel Apple Cider,$4.00,Cafe Kopi
-Steamer,$3.25,Cafe Kopi
-Italian Soda,$2.65,Cafe Kopi
-French soda,$3.15,Cafe Kopi
-Wild Lemonade,$3.75,Cafe Kopi
-Tropical Palmer,$3.75,Cafe Kopi
-Caramel Chaider,$4.50,Cafe Kopi
-Baby Greens Salad,$7.00,Cafe Kopi
-Tuna Salad on Baby Greens,$7.95,Cafe Kopi
-Chicken Salad on Baby Greens,$7.95,Cafe Kopi
-Goat Cheese Salad,$7.95,Cafe Kopi
-Egg Salad on Baby Greens,$7.95,Cafe Kopi
-Container of Tuna Salad,$5.95,Cafe Kopi
-Container of Curried Egg Salad,$4.50,Cafe Kopi
-Lavender Honey Latte,$4.50,Cafe Kopi
-Butter Beer Latte,$4.50,Cafe Kopi
-Decaf Columbia Halfwit,$4.00,Brew Lab
-Rwanda Halfwit,$4.00,Brew Lab
-Ethiopia Onyx,$4.25,Brew Lab
-Red Symphony (Herbal),$3.00,Brew Lab
-Chamomile (Herbal),$3.00,Brew Lab
-Dragonwell (Green),$3.00,Brew Lab
-Iron Goddess (Oolong),$3.50,Brew Lab
-Sunstone (Red),$3.00,Brew Lab
-Prairie Moonlight (Black & Green),$3.00,Brew Lab
-Hot Chocolate,$3.50,Brew Lab
-Chai,$4.00,Brew Lab
-Cortado,$3.25,Brew Lab
-Americano,$2.75,Brew Lab
-Americola,$4.00,Brew Lab
-Cappuccino,$3.35,Brew Lab
-Mocha,$4.75,Brew Lab
-Drip Coffee,$2.50,Brew Lab
-Macchiato,$3.00,Brew Lab
-Espresso,$2.75,Brew Lab
+Decaf Columbia Halfwit,3.20,Brew Lab
+Rwanda Halfwit,3.85,Brew Lab
+Ethiopia Onyx,3.70,Brew Lab
+Red Symphony (Herbal),4.35,Brew Lab
+Chamomile (Herbal),5.00,Brew Lab
+Dragonwell (Green),3.50,Brew Lab
+Iron Goddess (Oolong),4.85,Brew Lab
+Sunstone (Red),3.50,Brew Lab
+Prairie Moonlight (Black & Green),3.50,Brew Lab
+Hot Chocolate,3.75,Brew Lab
+Chai,4.15,Brew Lab
+Cortado,3.15,Brew Lab
+Americano,3.85,Brew Lab
+Americola,2.75,Brew Lab
+Cappuccino,2.45,Brew Lab
+Mocha,2.60,Brew Lab
+Drip Coffee,2.50,Brew Lab
+Macchiato,3.15,Brew Lab
+Espresso,2.00,Brew Lab

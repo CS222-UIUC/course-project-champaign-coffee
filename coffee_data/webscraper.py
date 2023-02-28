@@ -45,18 +45,20 @@ append_shop_to_csv('brew_lab_menu.csv', 'Brew Lab')
 # Open all 4 menus in order to merge into one
 espresso_df = pd.read_csv('espresso_royale_menu.csv')
 bene_df = pd.read_csv('cafe_bene_menu.csv')
-kopi_df = pd.read_csv('cafe_kopi_menu.csv')
 brew_df = pd.read_csv('brew_lab_menu.csv')
+kopi_df = pd.read_csv('cafe_kopi_menu.csv')
 
 # Removing the + next to prices for consistency
 espresso_df['Price'] = espresso_df['Price'].str.replace("+", "",regex=False)
 bene_df['Price'] = espresso_df['Price'].str.replace("+", "",regex=False)
 
 # Concatenate the 4 dataframes into a single dataframe
-merged_df = pd.concat([espresso_df, bene_df, kopi_df, brew_df])
+merged_df = pd.concat([kopi_df, espresso_df, bene_df, brew_df])
+#merged_df = pd.concat([espresso_df.reset_index(drop=True), bene_df.reset_index(drop=True), brew_df.reset_index(drop=True), kopi_df.reset_index(drop=True)], axis=1)
 
-
+# File modifications
 del merged_df['Unnamed: 0']
+merged_df['Price'] = espresso_df['Price'].str.replace("$", "",regex=False)
 
 # Write the merged dataframe to a new CSV file
 merged_df.to_csv('champaign_coffee_menus.csv', index=False)

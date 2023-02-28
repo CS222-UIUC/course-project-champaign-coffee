@@ -2,6 +2,7 @@
 # in order to run test cases, type `pytest test.py` in terminal
 
 import requests
+from db import MenuItem, Session
 
 def test_initial_server():
     response = requests.get('http://127.0.0.1:5000/')
