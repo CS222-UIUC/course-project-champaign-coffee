@@ -1,9 +1,7 @@
-# TEST CASES
-# in order to run test cases, type `pytest test.py` in terminal
-
+""" in order to run test cases, type `pytest test.py` in terminal """
 import requests
-from db import MenuItem, Session
 
 def test_initial_server():
-    response = requests.get('http://127.0.0.1:5000/')
+    """Test is initial server works locally"""
+    response = requests.get('http://127.0.0.1:5000/', timeout=10)
     assert response.status_code == 200
