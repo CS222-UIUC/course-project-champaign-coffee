@@ -1,50 +1,39 @@
-#Reference: https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_using_query.htm
-
-from sqlalchemy import create_engine, Column, Integer, String, Float
-from sqlalchemy.orm import sessionmaker, declarative_base
+"""Reference: https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_using_query.htm"""
 import csv
+from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy.orm import sessionmaker, declarative_base
 
 engine = create_engine('sqlite:///champaign_menu.db', echo=True)
-
 Base = declarative_base()
-
-# SQL Coffee Data Object by Id, Item, Price, and Shop
 class CoffeeData(Base):
-    __tablename__ = 'menu_item',
+    """SQL Coffee Data Object by Id, Item, Price, and Shop"""
+    __tablename__ = 'menu_item'
     id = Column(Integer, primary_key=True)
     item = Column(String)
     price = Column(String) # should change to float but gives parsing error
     shop = Column(String)
-
-Base.metadata.create_all(engine)  
-
+    def pub1(self):
+        """Pylint case"""
+    def pub2(self):
+        """Pylint case"""
+Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
 # Parse CSV file for database
-with open('coffee_data/champaign_coffee_menus.csv') as csvfile:
+with open('coffee_data/champaign_coffee_menus.csv', encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
-        item, price, shop = row
-        menu_item = CoffeeData(item=item, price=price, shop=shop)
+        csv_item, csv_price, csv_shop = row
+        menu_item = CoffeeData(item=csv_item, price=csv_price, shop=csv_shop)
         session.add(menu_item)
 
-# Prints all the entries to terminal as sanity check
-# result = session.query(CoffeeData)
-# for row in result:
-  #  print ("Item:",row.item, ", Price:", row.price, ", Coffee Shop:", row.shop)
-
-# Returns all the items from brewlab
-brew_lab_items = session.query(CoffeeData).filter(CoffeeData.shop == 'Brew Lab').all()
-for item in brew_lab_items:
-    print(item.item, item.price, item.shop)
-
+# INFORMAL TESTING
 # Finds and returns all items under $2.00 in Espresso Royale
-espresso_royale_items = session.query(CoffeeData).filter(CoffeeData.price < 2.0).filter(CoffeeData.shop == 'Espresso Royale').all()
-for item in espresso_royale_items:
-    print(item.item, item.price, item.shop)
+def get_item(shop):
+    """Return all items from a specified shop"""
+    get_shop_items = session.query(CoffeeData).filter(CoffeeData.shop == shop)
+    for item in get_shop_items:
+        print(item.item, item.price, item.shop)
 
-
-
-
-
+get_item('Brew Lab')
