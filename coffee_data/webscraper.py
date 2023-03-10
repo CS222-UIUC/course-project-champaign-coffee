@@ -8,6 +8,7 @@ import pandas as pd
 def menu_scraper(url, file_name):
     """Function that takes in a url and file name"""
   # GETS inputted URL to parse HTML content
+  
     content = requests.get(url, timeout=10)
     soup = BeautifulSoup(content.text, 'html.parser')
     rows = soup.find_all('span', class_=['item-title', 'item-price'])
