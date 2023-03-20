@@ -4,6 +4,12 @@ import csv
 from sqlalchemy import create_engine, Column, Integer, String, inspect,  MetaData, Float
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
+#structure:
+#coffee shop table (id, name, location)
+#items table (id, name)
+#sell (coffee shop id, item id (from items table), price, *ratings) 
+#primary and foreign keys
+
 engine = create_engine('sqlite:///champaign_menu.db',
                        echo=True, connect_args={'timeout': 1}) #adding timeout to verify that timeout is not the cause of errors
 Base = declarative_base()
@@ -38,6 +44,7 @@ with open('coffee_data/champaign_coffee_menus.csv', encoding="utf-8") as csvfile
 
 # INFORMAL TESTING
 # Finds and returns all items under $2.00 in Espresso Royale
+
 
 
 def get_item(shop):
