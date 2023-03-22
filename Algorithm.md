@@ -13,3 +13,13 @@ selected responses for each of the assigned categories (results of the questions
 4. Will ask location preference 
 5. Will ask preferred ratings and how much they matter
 6. How much it's proximity to various campus buildings/departments matters.
+
+3/22 Notes
+
+Will filter possibilities after each question that asks discrete values, while for continous like price or flavor (which can be interpreted on a scale based on type), these will be pre computed and the algo will attempt to minimize the differences.
+
+Location (two parameters: desired proximity to what and how much it matters to user on a scale)
+
+Can return both results for that and closest on campus if user selects that that matters.
+
+Can get location from ip.
