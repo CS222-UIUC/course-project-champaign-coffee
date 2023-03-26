@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+	<title>Champaign Coffee</title>
+</head>
+<body>
+	<!-- HTML code -->
+	<div class="topnav">
+		<img src="static/logo.png" alt="Coffee logo" style="float:left; width: 80px; height:65px;">
+		<a href="{{url_for('home')}}">Home</a>
+		<a href = "{{url_for('discover')}}">Discover</a>
+		<a href="{{url_for('ratings')}}">Ratings</a>
+		<a class="active" href="{{ url_for('feedback') }}">Feedback</a>
+	</div>
+	
+    <div class="center">
+		<form class="form">
+			<label for="textbox">Feedback</label>
+			<input type="text" id="textbox" name="textbox"><br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

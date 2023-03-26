@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topnav {
+    background-color: #94D4F9;
+    overflow: hidden;
+    text-align: right; 
+}
+
+.title {
+    text-emphasis-color: white;
+    text-align: left;
+}
+
+.topnav a {
+    float: none;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.58);
+    color: #f2f2f2;
+}
+
+.active {
+    background-color: #5db4e6;
+    color: white;
+}
+
+button {
+    background-color: #94D4F9;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+}  
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 300px;
+    width: 500px;
+}
+
+.dropdown {
+    width: 50%;
+    margin: 20px;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.dropdown select:hover {
+    background-color: #f9f9f9;
+}
+
+.dropdown select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.dropdown select option {
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.dropdown select option:last-child {
+    border-bottom: none;
+}
+
