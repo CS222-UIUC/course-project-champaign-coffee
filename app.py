@@ -1,7 +1,6 @@
 """ FLASK SERVER FOR WEB APP """
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
-""" type 'flask run' in terminal to run local server to http://127.0.0.1:5000/ """
 
 @app.route("/")
 def home():
@@ -19,3 +18,9 @@ def ratings():
 @app.route('/feedback')
 def feedback():
     return render_template('feedback.html')
+
+@app.route('/submit-feedback', methods=['POST'])
+def submit_feedback():
+    feedback = request.form.get('textbox') 
+    print(f"New feedback received: {feedback}") 
+    return render_template('feedback.html', feedback=feedback)

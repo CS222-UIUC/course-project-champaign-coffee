@@ -2,6 +2,8 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 	<title>Champaign Coffee</title>
 </head>
@@ -16,8 +18,10 @@
 	</div>
 	<div class = "center-text">
     <center><h1>Champaign Coffee</h1></center>
-    <center><h2>Find your next cup of coffee in Champaign</h2></center>
-    <center><button>Find my coffee!</button></center>
+    <center><p>Find your next cup of coffee in Champaign</p></center>
+	<center><img src = "static/coffee.png" style="width: 400px; height:350px;"></img></center>
+    <center><a href="{{ url_for('discover') }}"><button id="find-my-coffee">Discover Coffee</button></a></center>
+	
 </div>
 </body>
 </html>

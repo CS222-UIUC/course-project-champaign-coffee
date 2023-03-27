@@ -8,3 +8,8 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
+const form = document.querySelector('form');
+const feedbackReceived = document.getElementById('feedback-received');
+const feedbackText = document.getElementById('feedback-text');
+
