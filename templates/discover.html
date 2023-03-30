@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}?v={{ app_version }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}?v={{ app_version }}"></script>
 	<title>Champaign Coffee</title>
 </head>
 <body>
 	<!-- HTML code -->
 	<div class="topnav">
-		<img src="static/logo.png" alt="Coffee logo" style="float:left; width: 80px; height:65px;">
+		<img src="static/logo.png?v=1.0" alt="Coffee logo" style="float:left; width: 80px; height:65px;">
 		<a href="{{ url_for('home') }}">Home</a>
 		<a class="active" href="{{ url_for('discover') }}">Discover</a>
 		<a href="{{ url_for('ratings') }}">Ratings</a>
 		<a href="{{ url_for('feedback') }}">Feedback</a>
 	</div>
 	
-    <center><h1>Fill out form for coffee preference</h1></center>
+    <center><h1>Discover Your Perfect Coffee Match</h1>
+	<h2>Fill Out Our Form!</h2></center>
+	<center><form class = "form-border">
+		<p>Question 1: </p>
+		<input type="radio" name="coffee-preference1" value="1">Filler<br>
+		<input type="radio" name="coffee-preference1" value="2">Filler<br>
+		<input type="radio" name="coffee-preference1" value="3">Filler<br>
+		<input type="radio" name="coffee-preference1" value="4">Filler<br>
+		
+		<p>Question 2: </p>
+		<input type="radio" name="coffee-preference2" value="1">Filler<br>
+		<input type="radio" name="coffee-preference2" value="2">Filler<br>
+		<input type="radio" name="coffee-preference2" value="3">Filler<br>
+		<input type="radio" name="coffee-preference2" value="4">Filler<br>
+		
+		<p>Question 3: </p>
+		<input type="radio" name="coffee-preference3" value="1">Filler<br>
+		<input type="radio" name="coffee-preference3" value="2">Filler<br>
+		<input type="radio" name="coffee-preference3" value="3">Filler<br>
+		<input type="radio" name="coffee-preference3" value="4">Filler<br>
+		
+		<p>Question 4: </p>
+		<input type="radio" name="coffee-preference4" value="1">Filler<br>
+		<input type="radio" name="coffee-preference4" value="2">Filler<br>
+		<input type="radio" name="coffee-preference4" value="3">Filler<br>
+		<input type="radio" name="coffee-preference4" value="4">Filler<br>
+		
+		<p>Question 5: </p>
+		<input type="radio" name="coffee-preference5" value="1">Filler<br>
+		<input type="radio" name="coffee-preference5" value="2">Filler<br>
+		<input type="radio" name="coffee-preference5" value="3">Filler<br>
+		<input type="radio" name="coffee-preference5" value="4">Filler<br>
+		
+		<p>Question 6: </p>
+		<input type="radio" name="coffee-preference6" value="1">Filler<br>
+		<input type="radio" name="coffee-preference6" value="2">Filler<br>
+		<input type="radio" name="coffee-preference6" value="3">Filler<br>
+		<input type="radio" name="coffee-preference6" value="4">Filler<br>
+		
+		<br><br>
+		<input type="submit" value="Submit" class = "submit"></center>
+	  </form>
+	 
     
 
 </body>
