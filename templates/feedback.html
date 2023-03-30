@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+	<title>Champaign Coffee</title>
+</head>
+<body>
+	<!-- HTML code -->
+	<div class="topnav">
+		<img src="static/logo.png" alt="Coffee logo" style="float:left; width: 80px; height:65px;">
+		<a href="{{url_for('home')}}">Home</a>
+		<a href = "{{url_for('discover')}}">Discover</a>
+		<a href="{{url_for('ratings')}}">Ratings</a>
+		<a class="active" href="{{ url_for('feedback') }}">Feedback</a>
+	</div>
+	<center><h2>Let us know what you think about our app!</h2>
+	<form method="post" action="submit-feedback">
+		<textarea id="textbox" name="textbox" style="width: 500px; height: 200px;" placeholder="Enter your feedback"></textarea>
+		<br><br>
+		<input type="submit" value="Submit" class="submit">
+	  </form></center>
+
+	  {% if feedback %}
+	<div class="feedback-received">
+		<center><p>Thank you for your feedback!</p></center>
+	  </div>
+  {% endif %}
+	  
+</body>
+</html>
