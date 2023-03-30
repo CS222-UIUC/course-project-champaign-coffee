@@ -89,4 +89,9 @@ button, .find-my-coffee, .submit {
     cursor: pointer; 
   }
 
-
+.form-border {
+  width: 55%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  }

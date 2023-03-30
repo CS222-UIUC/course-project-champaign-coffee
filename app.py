@@ -1,6 +1,7 @@
 """ FLASK SERVER FOR WEB APP """
 from flask import Flask, render_template, request
 app = Flask(__name__)
+app_version = '1.0'
 
 @app.route("/")
 def home():
