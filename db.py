@@ -81,30 +81,3 @@ with open('coffee_data/champaign_coffee_menus.csv', encoding="utf-8") as csvfile
                     coffee_shop=coffee_shop, item=item, price=float(csv_price), ratings=0)
                 session.add(coffee_data)
                 
-
-# INFORMAL TESTING
-# Finds and returns all items under $2.00 in Espresso Royale
-
-
-# def get_item(shop):
-#     """Return all items from a specified shop"""
-#     get_shop_items = session.query(CoffeeData).join(
-#         CoffeeShop).filter(CoffeeData.shop == shop)
-#     items = [(item.item.name, item.price, item.shop.name)
-#              for item in get_shop_items]
-#     return items
-
-
-# items = get_item('Brew Lab')
-# print(items)
-
-
-# inspector = inspect(engine)
-# table_names = inspector.get_table_names()
-# table_name = table_names[0] if len(table_names) == 1 else ''
-# print(table_name)
-
-# print(inspector.get_table_names())
-
-
-# session.close()

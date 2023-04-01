@@ -53,11 +53,6 @@ for url, file_name in shop_urls.items():
 # Define a list of CSV file names to merge
 csv_files = ['espresso_royale_menu.csv', 'cafe_bene_menu.csv', 'cafe_kopi_menu.csv', 'brew_lab_menu.csv']
 
-# append_shop_to_csv('espresso_royale_menu.csv', 'Espresso Royale')
-# append_shop_to_csv('cafe_bene_menu.csv', 'Cafe Bene')
-# append_shop_to_csv('cafe_kopi_menu.csv', 'Cafe Kopi')
-# append_shop_to_csv('brew_lab_menu.csv', 'Brew Lab')
-
 # Loop through each CSV file and read into a DataFrame, then concatenate into a single DataFrame
 dfs = []
 for file_name in csv_files:
