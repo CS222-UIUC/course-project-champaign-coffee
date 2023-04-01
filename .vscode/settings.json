@@ -1,0 +1,6 @@
+{
+    "editor.screenReaderAnnounceInlineSuggestion": true,
+    "editor.quickSuggestions": {
+        "other": "inline"
+    }
+}
