@@ -1,70 +1,70 @@
-,Item,Price,Shop
-0,Espresso,$1.95+,Cafe Bene
-1,Cappuccino,$2.55+,Cafe Bene
-2,Macchiato,$2.45+,Cafe Bene
-3,Cortado,$2.55+,Cafe Bene
-4,Americano,$1.95+,Cafe Bene
-5,Cafe Latte,$2.55+,Cafe Bene
-6,Cafe Mocha,$2.95+,Cafe Bene
-7,White Mocha,$2.95+,Cafe Bene
-8,Vanilla Latte,$2.95+,Cafe Bene
-9,Caramel Latte Macchiato,$3.25+,Cafe Bene
-10,Maple Latte Macchiato,$3.75+,Cafe Bene
-11,Spanish Latte,$3.25+,Cafe Bene
-12,Brewed Coffee,$1.45+,Cafe Bene
-13,Iced Coffee,$1.45+,Cafe Bene
-14,Cafe au Lait,$1.95+,Cafe Bene
-15,Smoothie,$5.25+,Cafe Bene
-16,Green Tea Latte,$3.25+,Cafe Bene
-17,Misugaru Latte,$3.95+,Cafe Bene
-18,Red Velvet Latte,$4.65+,Cafe Bene
-19,Iced Tea,$1.95+,Cafe Bene
-20,Chai Tea Latte,$3.25+,Cafe Bene
-21,Iced Tea Lemonade,$2.25+,Cafe Bene
-22,Caffeinated Premium Whole Leaf Tea,$2.25+,Cafe Bene
-23,Non-Caffeinated Premium Whole Leaf Tea,$2.25+,Cafe Bene
-24,Hot Chocolate,$3.45+,Cafe Bene
-25,Bubble Tea Latte,$3.95+,Cafe Bene
-26,Bubble Tea Smoothie,$4.25+,Cafe Bene
-27,Coffee Frappe,$2.95+,Cafe Bene
-28,Mocha Frappe,$4.95+,Cafe Bene
-29,Chocolate Frappe,$3.25+,Cafe Bene
-30,Pure Vanilla Frappe,$3.25+,Cafe Bene
-31,Green Tea Frappe,$3.25+,Cafe Bene
-32,Caramel Cinnamon Misugaru Frappe,$4.95+,Cafe Bene
-33,Cranberry Almond Misugaru Frappe,$4.95+,Cafe Bene
-34,Plain Misugaru Frappe,$4.45+,Cafe Bene
-35,Mojito,$4.25,Cafe Bene
-36,Asian Shrimp Sandwich,$5.95,Cafe Bene
-37,Ham and Egg Sandwich,$5.95,Cafe Bene
-38,Portabella Sandwich,$5.95,Cafe Bene
-39,Spicy Chicken Sandwich,$5.95,Cafe Bene
-40,Teriyaki Chicken Sandwich,$5.95,Cafe Bene
-41,Grilled Cheese,$5.95,Cafe Bene
-42,Strawberry Cream Cheese Honey Bread,$7.95,Cafe Bene
-43,Caramel Cinnamon Honey Bread,$7.95,Cafe Bene
-44,Banana Walnut Honey Bread,$7.95,Cafe Bene
-45,Macaron,$1.95+,Cafe Bene
-46,Mini Pecan Pie,$4.95,Cafe Bene
-47,Cake,$4.95,Cafe Bene
-48,Tiramisu Glass,$4.95,Cafe Bene
-49,Gelato,$1.95+,Cafe Bene
-50,Misugaru Bingsu,$7.95+,Cafe Bene
-51,Coffee Bingsu,$7.95+,Cafe Bene
-52,Green Tea Bingsu,$8.95+,Cafe Bene
-53,Strawberry Bingsu,$7.95+,Cafe Bene
-54,Mango Bingsu,$9.25+,Cafe Bene
-55,Oreo Bingsu,$7.95+,Cafe Bene
-56,Acai Bowl,$7.95,Cafe Bene
-57,Original Waffle,$5.95,Cafe Bene
-58,Strawberry Waffle,$5.95,Cafe Bene
-59,Caramel Banana Waffle,$5.95,Cafe Bene
-60,Strawberry Cream Cheese Waffle,$5.95,Cafe Bene
-61,Blueberry Waffle,$5.95,Cafe Bene
-62,Strawberry Yogurt Waffle,$5.95,Cafe Bene
-63,Blueberry Yogurt Waffle,$5.95,Cafe Bene
-64,Double Chocolate Muffin,$2.95,Cafe Bene
-65,Blueberry Muffin,$2.95,Cafe Bene
-66,Banana Muffin,$2.95,Cafe Bene
-67,2 LB Bag Black Velvet Coffee Beans,$19.95,Cafe Bene
-68,1 Gallon Caffe Bene Coffee To Go,$16.95,Cafe Bene
+Item,Price,Location,Shop
+Espresso,$1.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Cappuccino,$2.55+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Macchiato,$2.45+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Cortado,$2.55+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Americano,$1.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Cafe Latte,$2.55+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Cafe Mocha,$2.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+White Mocha,$2.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Vanilla Latte,$2.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Caramel Latte Macchiato,$3.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Maple Latte Macchiato,$3.75+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Spanish Latte,$3.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Brewed Coffee,$1.45+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Iced Coffee,$1.45+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Cafe au Lait,$1.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Smoothie,$5.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Green Tea Latte,$3.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Misugaru Latte,$3.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Red Velvet Latte,$4.65+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Iced Tea,$1.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Chai Tea Latte,$3.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Iced Tea Lemonade,$2.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Caffeinated Premium Whole Leaf Tea,$2.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Non-Caffeinated Premium Whole Leaf Tea,$2.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Hot Chocolate,$3.45+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Bubble Tea Latte,$3.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Bubble Tea Smoothie,$4.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Coffee Frappe,$2.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Mocha Frappe,$4.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Chocolate Frappe,$3.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Pure Vanilla Frappe,$3.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Green Tea Frappe,$3.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Caramel Cinnamon Misugaru Frappe,$4.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Cranberry Almond Misugaru Frappe,$4.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Plain Misugaru Frappe,$4.45+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Mojito,$4.25,"700 S Gregory St, Urbana, IL 61801",Cafe
+Asian Shrimp Sandwich,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Ham and Egg Sandwich,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Portabella Sandwich,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Spicy Chicken Sandwich,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Teriyaki Chicken Sandwich,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Grilled Cheese,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Strawberry Cream Cheese Honey Bread,$7.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Caramel Cinnamon Honey Bread,$7.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Banana Walnut Honey Bread,$7.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Macaron,$1.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Mini Pecan Pie,$4.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Cake,$4.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Tiramisu Glass,$4.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Gelato,$1.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Misugaru Bingsu,$7.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Coffee Bingsu,$7.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Green Tea Bingsu,$8.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Strawberry Bingsu,$7.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Mango Bingsu,$9.25+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Oreo Bingsu,$7.95+,"700 S Gregory St, Urbana, IL 61801",Cafe
+Acai Bowl,$7.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Original Waffle,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Strawberry Waffle,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Caramel Banana Waffle,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Strawberry Cream Cheese Waffle,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Blueberry Waffle,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Strawberry Yogurt Waffle,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Blueberry Yogurt Waffle,$5.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Double Chocolate Muffin,$2.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Blueberry Muffin,$2.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+Banana Muffin,$2.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+2 LB Bag Black Velvet Coffee Beans,$19.95,"700 S Gregory St, Urbana, IL 61801",Cafe
+1 Gallon Caffe Bene Coffee To Go,$16.95,"700 S Gregory St, Urbana, IL 61801",Cafe
