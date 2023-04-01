@@ -11,55 +11,67 @@ def menu_scraper(url, file_name):
   
     content = requests.get(url, timeout=10)
     soup = BeautifulSoup(content.text, 'html.parser')
+    location = soup.find('a', class_='menu-address').text.strip()
     rows = soup.find_all('span', class_=['item-title', 'item-price'])
     # Open the CSV file for writing
     with open(file_name, mode='w', newline='', encoding="utf-8") as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow(['Item', 'Price'])
+        writer.writerow(['Item', 'Price', 'Location'])
     # Loop through each pair of item and price elements and write into CSV file
         for i in range(0, len(rows), 2):
             item = rows[i].text.strip()
             price = rows[i+1].text.strip()
-            writer.writerow([item, price])
-
-# Web Scraping Coffee Menus from: Espresso Royale, Cafe Bene, Cafe Kopi, and Brew Lab
-menu_scraper('https://www.allmenus.com/il/champaign/839482-espresso-royale/menu/',
-'espresso_royale_menu.csv')
-menu_scraper('https://www.allmenus.com/il/urbana/760257-caffe-bene/menu/',
-'cafe_bene_menu.csv')
-menu_scraper('https://www.allmenus.com/il/champaign/254661-cafe-kopi/menu/',
- 'cafe_kopi_menu.csv')
-menu_scraper('https://www.allmenus.com/il/champaign/757433-brewlab-coffee/menu/',
- 'brew_lab_menu.csv')
+            writer.writerow([item, price, location])
+            
+    return location
 
 
-def append_shop_to_csv(file_name, shop):
+# Define a list of coffee shop URLs and corresponding file names
+shop_urls = {
+    'https://www.allmenus.com/il/champaign/839482-espresso-royale/menu/': 'espresso_royale_menu.csv',
+    'https://www.allmenus.com/il/urbana/760257-caffe-bene/menu/': 'cafe_bene_menu.csv',
+    'https://www.allmenus.com/il/champaign/254661-cafe-kopi/menu/': 'cafe_kopi_menu.csv',
+    'https://www.allmenus.com/il/champaign/757433-brewlab-coffee/menu/': 'brew_lab_menu.csv'
+}
+
+
+def append_shop_to_csv(file_name, shop, location):
     """Function to append shop name next to every row in CSV file"""
+   #  location = file_name.split('_')[1].split('.')[0]
     csv_input = pd.read_csv(file_name, on_bad_lines='skip')
     csv_input['Shop'] = shop
-    csv_input.to_csv(file_name)
+    csv_input['Location'] = location
+    csv_input.to_csv(file_name, index=False)
 
-append_shop_to_csv('espresso_royale_menu.csv', 'Espresso Royale')
-append_shop_to_csv('cafe_bene_menu.csv', 'Cafe Bene')
-append_shop_to_csv('cafe_kopi_menu.csv', 'Cafe Kopi')
-append_shop_to_csv('brew_lab_menu.csv', 'Brew Lab')
 
-# Open all 4 menus in order to merge into one
-espresso_df = pd.read_csv('espresso_royale_menu.csv')
-bene_df = pd.read_csv('cafe_bene_menu.csv')
-brew_df = pd.read_csv('brew_lab_menu.csv')
-kopi_df = pd.read_csv('cafe_kopi_menu.csv')
+# Loop through each shop URL and scrape the menu, then append shop and location information to CSV
+for url, file_name in shop_urls.items():
+    location = menu_scraper(url, file_name)
+    shop_name = file_name.split("_")[0].title()
+    append_shop_to_csv(file_name, shop_name, location)
 
-# Removing the + next to prices for consistency
-espresso_df['Price'] = espresso_df['Price'].str.replace("+", "",regex=False)
-bene_df['Price'] = espresso_df['Price'].str.replace("+", "",regex=False)
+# Define a list of CSV file names to merge
+csv_files = ['espresso_royale_menu.csv', 'cafe_bene_menu.csv', 'cafe_kopi_menu.csv', 'brew_lab_menu.csv']
 
-# Concatenate the 4 dataframes into a single dataframe
-merged_df = pd.concat([kopi_df, espresso_df, bene_df, brew_df])
+# append_shop_to_csv('espresso_royale_menu.csv', 'Espresso Royale')
+# append_shop_to_csv('cafe_bene_menu.csv', 'Cafe Bene')
+# append_shop_to_csv('cafe_kopi_menu.csv', 'Cafe Kopi')
+# append_shop_to_csv('brew_lab_menu.csv', 'Brew Lab')
+
+# Loop through each CSV file and read into a DataFrame, then concatenate into a single DataFrame
+dfs = []
+for file_name in csv_files:
+    df = pd.read_csv(file_name)
+    dfs.append(df)
+
+merged_df = pd.concat(dfs)
+
+# Drop 'Unnamed: 0' column if it exists
+if 'Unnamed: 0' in merged_df.columns:
+    merged_df = merged_df.drop(columns=['Unnamed: 0'])
 
 # File modifications
-del merged_df['Unnamed: 0']
-merged_df['Price'] = espresso_df['Price'].str.replace("$", "",regex=False)
+merged_df['Price'] = merged_df['Price'].str.replace("+", "", regex=False)
 
 # Write the merged dataframe to a new CSV file
 merged_df.to_csv('champaign_coffee_menus.csv', index=False)
