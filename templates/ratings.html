@@ -17,8 +17,9 @@
 		<a href="{{ url_for('feedback') }}">Feedback</a>
 	</div>
     <center><h2>Select coffee shop you would like to rate</h2></center>
+	<form method="POST" action="{{ url_for('submit_rating') }}">
 	<center><div class="dropdown">
-		<select>
+		<select name="coffee_shop">
 			<option value="brew-lab">Brew Lab</option>
 			<option value="cafe-bene">Cafe Bene</option>
 			<option value="cafe-kopi">Cafe Kopi</option>
@@ -31,5 +32,9 @@
 	<textarea id="feedback" name="feedback" style="width: 500px; height: 200px;" placeholder="Write your review here"></textarea>
 	<br>
 	<input type="submit" value="Submit" class = "submit"></center>
+	</form>
+	{% if submitted %}
+       <center><p>Your rating was submitted. Thank you!</p></center>
+	{% endif %}
 </body>
 </html>

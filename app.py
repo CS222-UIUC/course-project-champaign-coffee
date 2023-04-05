@@ -16,6 +16,19 @@ def discover():
 def ratings():
     return render_template('ratings.html')
 
+@app.route('/submit_rating', methods=['POST'])
+def submit_rating():
+    coffee_shop = request.form['coffee_shop']
+    rating = request.form['rating']
+    feedback = request.form['feedback']
+
+     # local testing
+    print(f"Coffee shop: {coffee_shop}")
+    print(f"Rating: {rating}/5")
+    print(f"Feedback: {feedback}") 
+
+    return render_template('ratings.html', submitted=True)
+
 @app.route('/feedback')
 def feedback():
     return render_template('feedback.html')
