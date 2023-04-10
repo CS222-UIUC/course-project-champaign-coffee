@@ -1,4 +1,4 @@
-# Champaign Coffee Matcher
+# Champaign Coffee Matcher :coffee:
 
 Champaign Coffee Matcher is a Flask web application that recommends the best coffee for University of Illinois at Urbana-Champaign (UIUC) students. 
 
