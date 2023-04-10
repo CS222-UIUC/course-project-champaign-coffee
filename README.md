@@ -2,9 +2,15 @@
 
 Champaign Coffee Matcher is a Flask web application that recommends the best coffee for University of Illinois at Urbana-Champaign (UIUC) students. 
 
-The app scrapes data from coffee shop menus in Champaign (see ``coffee_data``) then stores the data into a database ``db.py`` and uses a matching algorithm to give personalized recommendations based on the user's preferences as described in [algo-sketch.md](https://github.com/CS222-UIUC/course-project-champaign-coffee/blob/main/algo-sketch.md). 
+The app scrapes data from coffee shop menus in Champaign (see ``coffee_data``) then stores the data into a database (see ``db.py`) and uses a matching algorithm to give personalized recommendations based on the user's preferences as described in [algo-sketch.md](https://github.com/CS222-UIUC/course-project-champaign-coffee/blob/main/algo-sketch.md). 
 
 Furthermore, users can rate the coffee and provide site feedback to help improve the recommendations.
+
+# Tech Stack
+* Flask
+* Beautiful Soup (data webscraping)
+* SQLite + SQLAlchemy
+* Classic HTML/CSS/Javascript (frontend)
 
 # Developers
 Danny Kim, Eyad Loutfi, Minhyung Lee, Monica Para
