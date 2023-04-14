@@ -1,97 +1,134 @@
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+	margin: 0;
+	font-family: 'Inter', sans-serif;
 }
 
 .topnav {
-    background-color: #94D4F9;
-    overflow: hidden;
-    text-align: right; 
+	background-color: #94D4F9;
+	overflow: hidden;
+	text-align: right;
 }
 
 .title {
-    text-emphasis-color: white;
-    text-align: left;
+	text-emphasis-color: white;
+	text-align: left;
 }
 
 .topnav a {
-    float: none;
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 20px 20px;
-    text-decoration: none;
-    font-size: 20px;
+	float: none;
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 20px 20px;
+	text-decoration: none;
+	font-size: 20px;
 }
 
 .topnav a:hover {
-    background-color: rgba(255, 255, 255, 0.58);
-    color: #f2f2f2;
+	background-color: rgba(255, 255, 255, 0.58);
+	color: #f2f2f2;
 }
 
 .active {
-    background-color: #5db4e6;
-    color: white;
+	background-color: #5db4e6;
+	color: white;
 }
 
-button, .find-my-coffee, .submit {
-    background-color: #94D4F9;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;   
-}  
+button,
+.find-my-coffee,
+.submit {
+	background-color: #94D4F9;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 16px 32px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
 
 
 .dropdown {
-    width: 50%;
-    margin: 20px;
+	width: 50%;
+	margin: 20px;
 }
 
 .dropdown select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	cursor: pointer;
 }
 
 .dropdown select:hover {
-    background-color: #f9f9f9;
+	background-color: #f9f9f9;
 }
 
 .dropdown select:focus {
-    outline: none;
-    box-shadow: 0 0 10px #ccc;
+	outline: none;
+	box-shadow: 0 0 10px #ccc;
 }
 
 .dropdown select option {
-    padding: 10px;
-    font-size: 16px;
-    border-bottom: 1px solid #ccc;
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
+	padding: 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	color: #000;
+	cursor: pointer;
 }
 
 .dropdown select option:last-child {
-    border-bottom: none;
+	border-bottom: none;
 }
 
 #find-my-coffee:hover {
-    background-color: #5db4e6;
-    color: black;
-    cursor: pointer; 
-  }
+	background-color: #5db4e6;
+	color: black;
+	cursor: pointer;
+}
 
 .form-border {
-  width: 55%;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  padding: 10px;
-  }
+	width: 55%;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+.coffee-shop h3 {
+	background-color: #94D4F9;
+	padding: 10px;
+	color: white;
+	border-radius: 5px 5px 0 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.coffee-shop-details {
+	background-color: #dff3ff;
+	padding: 10px;
+	border-radius: 0 0 5px 5px;
+}
+
+.coffee-shop-details p,
+.coffee-shop-details h4,
+.coffee-shop-details ul {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 5px;
+}
+
+.coffee-shop-details ul {
+	padding-left: 20px;
+}
+
+.coffee-shop-details li {
+	padding-bottom: 5px;
+}
+
+.expand-icon {
+	cursor: pointer;
+}

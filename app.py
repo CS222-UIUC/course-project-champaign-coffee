@@ -1,13 +1,13 @@
 """ FLASK SERVER FOR WEB APP """
 from flask import Flask, render_template, request, redirect, url_for
-from db import CoffeeShop, Item, CoffeeData, session
+from db import CoffeeShop, Item, CoffeeData, UserFeedback, SiteFeedback, session
 
 app = Flask(__name__)
 app_version = '1.0'
 
 
 @app.route("/")
-def home():
+def home(): 
     """ default server """
     return render_template('index.html')
 
@@ -35,6 +35,20 @@ def discover():
     return render_template('discover.html')
 
 
+@app.route('/coffee_shops')
+def coffee_shops():
+    coffee_shop_details = []
+    for shop in session.query(CoffeeShop).all():
+        feedbacks = session.query(UserFeedback).filter(
+            UserFeedback.coffee_shop_id == shop.id).all()
+        coffee_shop_details.append({
+            'shop': shop,
+            'feedbacks': feedbacks
+        })
+
+    return render_template('coffee_shops.html', coffee_shop_details=coffee_shop_details)
+
+
 @app.route('/ratings')
 def ratings():
     return render_template('ratings.html')
@@ -53,7 +67,11 @@ def submit_rating():
         return render_template('ratings.html', error="Invalid coffee shop name.")
 
     coffee_shop.update_ratings(float(rating))
-   #  session.add(self)
+    session.commit()
+
+    user_feedback = UserFeedback(
+        coffee_shop_id=coffee_shop.id, rating=rating, feedback=feedback)
+    session.add(user_feedback)
     session.commit()
 
     # local testing
@@ -72,6 +90,11 @@ def feedback():
 @app.route('/submit-feedback', methods=['POST'])
 def submit_feedback():
     feedback = request.form.get('textbox')
+
+    site_feedback = SiteFeedback(feedback=feedback)
+    session.add(site_feedback)
+    session.commit()
+
     print(f"New feedback received: {feedback}")
     return render_template('feedback.html', feedback=feedback)
 
