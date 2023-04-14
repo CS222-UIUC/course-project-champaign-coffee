@@ -1,7 +1,7 @@
 """Reference: https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_using_query.htm"""
-import pandas
 import csv
 import logging
+import pandas
 from sqlalchemy import create_engine, Column, Integer, String, inspect,  MetaData, Float, ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -16,7 +16,8 @@ from sqlalchemy.ext.declarative import declarative_base
 logging.basicConfig()
 logging.getLogger('sqlalchemy.engine').setLevel(logging.WARNING)
 engine = create_engine('sqlite:///champaign_menu.db',
-                       echo=False, connect_args={'timeout': 1})  # adding timeout to verify that timeout is not the cause of errors
+                       echo=False, connect_args={'check_same_thread': False, 'timeout': 1})
+	# adding timeout to verify that timeout is not the cause of errors
 Base = declarative_base()
 meta = MetaData()
 conn = engine.connect()
@@ -65,7 +66,29 @@ class CoffeeData(Base):
     item = relationship(Item)
 
 
+class UserFeedback(Base):
+    """SQL User Feedback Object by Id, CoffeeShop, Rating, and Feedback"""
+    __tablename__ = 'user_feedback'
+    id = Column(Integer, primary_key=True)
+    coffee_shop_id = Column(Integer, ForeignKey('coffee_shop.id'))
+    rating = Column(Integer)
+    feedback = Column(String)
+    coffee_shop = relationship(CoffeeShop, backref='feedbacks')
+
+
+class SiteFeedback(Base):
+    """SQL Site Feedback Object by Id, Rating, and Feedback"""
+    __tablename__ = 'site_feedback'
+    id = Column(Integer, primary_key=True)
+    feedback = Column(String)
+
+    def __init__(self, feedback):
+        self.feedback = feedback
+
+
 Base.metadata.create_all(engine)
+SiteFeedback.__table__.create(bind=engine, checkfirst=True)
+
 
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -92,7 +115,7 @@ with open('coffee_data/champaign_coffee_menus.csv', encoding="utf-8") as csvfile
             existing_coffee_data = session.query(CoffeeData).filter(
                 CoffeeData.coffee_shop == coffee_shop, CoffeeData.item == item).first()
             if existing_coffee_data:
-                # if a row already exists, update its price and ratings instead of inserting a new row
+                # if exists, update its price & ratings instead of inserting a new row
                 existing_coffee_data.price = float(csv_price.strip('$'))
             else:
                 # create a new CoffeeData object with the foreign keys to CoffeeShop and Item
