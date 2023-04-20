@@ -13,8 +13,9 @@ from sqlalchemy.ext.declarative import declarative_base
 # primary and foreign keys
 
 
-#drink_type, price, flavor, location, ratings, proximity
-# Other, Tea, latte, mocha, espresso, americano, cappuccino, macchiato, frappe
+# drink_type, price, flavor, location, ratings, proximity
+
+# string matches to a drink type
 def identify_drink_type(item_name):
     drink_types = ["Other", "Tea", "Latte", "Mocha", "Espresso",
                    "Americano", "Cappuccino", "Macchiato", "Frappe"]
@@ -202,6 +203,8 @@ session.commit()
 
 # hello eyad look here
 # Return closest priced coffee drink
+
+
 def find_closest_price_coffee(user_desired_price):
     coffee_data_query = session.query(CoffeeData).options(
         joinedload(CoffeeData.coffee_shop), joinedload(CoffeeData.item))
@@ -224,6 +227,8 @@ def find_closest_price_coffee(user_desired_price):
         }
     else:
         return None
+
+
 # test
 user_desired_price = 4.5
 closest_coffee = find_closest_price_coffee(user_desired_price)
