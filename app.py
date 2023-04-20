@@ -1,6 +1,7 @@
 """ FLASK SERVER FOR WEB APP """
 from flask import Flask, render_template, request, redirect, url_for
 from db import CoffeeShop, Item, CoffeeData, UserFeedback, SiteFeedback, session
+import config
 
 app = Flask(__name__)
 app_version = '1.0'
@@ -38,6 +39,7 @@ def discover():
 @app.route('/coffee_shops')
 def coffee_shops():
     coffee_shop_details = []
+    api_key = config.GOOGLE_MAPS_API_KEY
     for shop in session.query(CoffeeShop).all():
         feedbacks = session.query(UserFeedback).filter(
             UserFeedback.coffee_shop_id == shop.id).all()
@@ -45,7 +47,7 @@ def coffee_shops():
             'shop': shop,
             'feedbacks': feedbacks
         })
-
+    
     return render_template('coffee_shops.html', coffee_shop_details=coffee_shop_details)
 
 
