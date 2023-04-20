@@ -2,8 +2,8 @@
 import csv
 import logging
 import pandas
-from sqlalchemy import create_engine, Column, Integer, String, inspect,  MetaData, Float, ForeignKey
-from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy import create_engine, Column, Integer, String, inspect,  MetaData, Float, ForeignKey, func
+from sqlalchemy.orm import sessionmaker, relationship, joinedload
 from sqlalchemy.ext.declarative import declarative_base
 
 # structure:
@@ -13,11 +13,24 @@ from sqlalchemy.ext.declarative import declarative_base
 # primary and foreign keys
 
 
+#drink_type, price, flavor, location, ratings, proximity
+# Other, Tea, latte, mocha, espresso, americano, cappuccino, macchiato, frappe
+def identify_drink_type(item_name):
+    drink_types = ["Other", "Tea", "Latte", "Mocha", "Espresso",
+                   "Americano", "Cappuccino", "Macchiato", "Frappe"]
+    item_name_lower = item_name.lower()
+
+    for drink_type in drink_types[1:]:  # Skip the "Other"
+        if drink_type.lower() in item_name_lower:
+            return drink_type
+    return drink_types[0]
+
+
 logging.basicConfig()
 logging.getLogger('sqlalchemy.engine').setLevel(logging.WARNING)
 engine = create_engine('sqlite:///champaign_menu.db',
                        echo=False, connect_args={'check_same_thread': False, 'timeout': 1})
-	# adding timeout to verify that timeout is not the cause of errors
+# adding timeout to verify that timeout is not the cause of errors
 Base = declarative_base()
 meta = MetaData()
 conn = engine.connect()
@@ -42,7 +55,8 @@ class CoffeeShop(Base):
    #                                   for s in self.name.split('-')])
     def update_ratings(self, new_rating):
         """Updates the coffee shop's ratings and ratings_count based on a new rating"""
-        self.ratings = (self.ratings * self.ratings_count + new_rating) / (self.ratings_count + 1)
+        self.ratings = (self.ratings * self.ratings_count +
+                        new_rating) / (self.ratings_count + 1)
         self.ratings_count += 1
       #   session.add(self)
       #   session.commit()
@@ -86,6 +100,57 @@ class SiteFeedback(Base):
         self.feedback = feedback
 
 
+# algo tabler
+class ExtendedCoffeeData(Base):
+    __tablename__ = 'extended_coffee_data'
+    id = Column(Integer, primary_key=True)
+    coffee_shop_id = Column(Integer, ForeignKey('coffee_shop.id'))
+    item_id = Column(Integer, ForeignKey('item.id'))
+    drink_type = Column(String)  # <<<
+    price = Column(Float)
+    flavor = Column(String)
+    location = Column(String)
+    ratings = Column(Float)
+    proximity = Column(Float)
+    coffee_shop = relationship(CoffeeShop, backref='extended_items')
+    item = relationship(Item)
+
+
+def calculate_coffee_data_value(drink_type, price, flavor, location, ratings, proximity):
+   #  drink_type_weight = 1.0
+   #  price_weight = 1.0
+   #  flavor_weight = 1.0
+   #  location_weight = 1.0
+   #  ratings_weight = 1.0
+   #  proximity_weight = 1.0
+
+    normalized_drink_type = algo_for_drink_type(drink_type)
+    normalized_price = algo_for_price(price)
+    normalized_flavor = algo_for_flavor(flavor)
+    normalized_location = algo_for_location(location)
+    normalized_ratings = algo_for_ratings(ratings)
+    normalized_proximity = algo_for_proximity(proximity)
+
+    drink_type_value = drink_type_weight * normalized_drink_type
+    price_value = price_weight * normalized_price
+    flavor_value = flavor_weight * normalized_flavor
+    location_value = location_weight * normalized_location
+    ratings_value = ratings_weight * normalized_ratings
+    proximity_value = proximity_weight * normalized_proximity
+
+    # Calculate the overall data value for the coffee entry
+    coffee_entry_value = (
+        drink_type_value +
+        price_value +
+        flavor_value +
+        location_value +
+        ratings_value +
+        proximity_value
+    )
+
+    return coffee_entry_value
+
+
 Base.metadata.create_all(engine)
 SiteFeedback.__table__.create(bind=engine, checkfirst=True)
 
@@ -104,7 +169,8 @@ with open('coffee_data/champaign_coffee_menus.csv', encoding="utf-8") as csvfile
                 CoffeeShop.name == csv_shop).first()
             if not coffee_shop:
                 # initialize location attribute with csv_location
-                coffee_shop = CoffeeShop(name=csv_shop, location=csv_location, ratings=0.0)
+                coffee_shop = CoffeeShop(
+                    name=csv_shop, location=csv_location, ratings=0.0)
                 session.add(coffee_shop)
             # check if the item already exists in the database
             item = session.query(Item).filter(Item.name == csv_item).first()
@@ -122,4 +188,43 @@ with open('coffee_data/champaign_coffee_menus.csv', encoding="utf-8") as csvfile
                 coffee_data = CoffeeData(
                     coffee_shop=coffee_shop, item=item, price=float(csv_price.strip('$')))
                 session.add(coffee_data)
+            # table for algo
+            drink_type = identify_drink_type(csv_item)
+            flavor = ''
+            proximity = 0.0
+            ratings = 0.0
+            extended_coffee_data = ExtendedCoffeeData(
+                coffee_shop=coffee_shop, item=item, drink_type=drink_type, price=float(
+                    csv_price.strip('$')),
+                flavor=flavor, location=csv_location, ratings=ratings, proximity=proximity)
+            session.add(extended_coffee_data)
 session.commit()
+
+# hello eyad look here
+# Return closest priced coffee drink
+def find_closest_price_coffee(user_desired_price):
+    coffee_data_query = session.query(CoffeeData).options(
+        joinedload(CoffeeData.coffee_shop), joinedload(CoffeeData.item))
+
+    closest_price_difference = None
+    closest_coffee_data = None
+
+    for coffee_data in coffee_data_query:
+        price_difference = abs(coffee_data.price - user_desired_price)
+        if closest_price_difference is None or price_difference < closest_price_difference:
+            closest_price_difference = price_difference
+            closest_coffee_data = coffee_data
+
+    if closest_coffee_data:
+        return {
+            'coffee_shop': closest_coffee_data.coffee_shop.name,
+            'item': closest_coffee_data.item.name,
+            'price': closest_coffee_data.price,
+            'location': closest_coffee_data.coffee_shop.location
+        }
+    else:
+        return None
+# test
+user_desired_price = 4.5
+closest_coffee = find_closest_price_coffee(user_desired_price)
+print(closest_coffee)
