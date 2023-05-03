@@ -1,6 +1,7 @@
 """ FLASK SERVER FOR WEB APP """
 from flask import Flask, render_template, request, redirect, url_for
-from db import CoffeeShop, Item, CoffeeData, UserFeedback, SiteFeedback, session
+from db import CoffeeShop, Item, CoffeeData, UserFeedback, SiteFeedback, session, ExtendedCoffeeData
+from sqlalchemy.orm import joinedload
 import config
 
 app = Flask(__name__)
@@ -49,6 +50,17 @@ def coffee_shops():
         })
     
     return render_template('coffee_shops.html', coffee_shop_details=coffee_shop_details)
+
+
+@app.route('/browse_coffees')
+def browse_coffees():
+    items = session.query(Item).all()
+    coffee_items = []
+    for item in items:
+        shops = session.query(ExtendedCoffeeData).options(joinedload(ExtendedCoffeeData.coffee_shop)).filter(ExtendedCoffeeData.item_id == item.id).all()
+        coffee_items.append((item, shops))
+
+    return render_template('browse_coffees.html', coffee_items=coffee_items)
 
 
 @app.route('/ratings')
