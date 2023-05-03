@@ -205,19 +205,93 @@ session.commit()
 # Return closest priced coffee drink
 
 
-def find_closest_price_coffee(user_desired_price):
-    coffee_data_query = session.query(CoffeeData).options(
-        joinedload(CoffeeData.coffee_shop), joinedload(CoffeeData.item))
+# def find_closest_price_coffee(user_desired_price):
+#     coffee_data_query = session.query(CoffeeData).options(
+#         joinedload(CoffeeData.coffee_shop), joinedload(CoffeeData.item))
 
-    closest_price_difference = None
+#     closest_price_difference = None
+#     closest_coffee_data = None
+
+#     for coffee_data in coffee_data_query:
+#         price_difference = abs(coffee_data.price - user_desired_price)
+#         if closest_price_difference is None or price_difference < closest_price_difference:
+#             closest_price_difference = price_difference
+#             closest_coffee_data = coffee_data
+
+#     if closest_coffee_data:
+#         return {
+#             'coffee_shop': closest_coffee_data.coffee_shop.name,
+#             'item': closest_coffee_data.item.name,
+#             'price': closest_coffee_data.price,
+#             'location': closest_coffee_data.coffee_shop.location
+#         }
+#     else:
+#         return None
+
+
+
+def recommended_coffee(min_price, max_price, rating_importance, proximity_importance, coffee_type):
+# proximity importance and rating importance are on a scale from 0 to 2 inclusive, 2 being most important
+    extended_coffee_data_query = session.query(ExtendedCoffeeData).options(
+        joinedload(ExtendedCoffeeData.coffee_shop), joinedload(ExtendedCoffeeData.item))
+
     closest_coffee_data = None
-
-    for coffee_data in coffee_data_query:
-        price_difference = abs(coffee_data.price - user_desired_price)
-        if closest_price_difference is None or price_difference < closest_price_difference:
-            closest_price_difference = price_difference
-            closest_coffee_data = coffee_data
-
+    closest_price = max_price
+    closest_coffee_data_prox = None
+    closest_price_prox = max_price
+    closest_coffee_data_rat = None
+    closest_price_rat = max_price
+# finds coffee that's within price range such that it matches coffee type and has lowest price among those possibilities
+    for coffee_data in extended_coffee_data_query:
+        if coffee_data.price >= min_price and coffee_data.price <= max_price and coffee_data.drink_type == coffee_type:
+                if coffee_data.price < closest_price:
+                    closest_coffee_data = coffee_data
+                    closest_price = coffee_data.price
+#  same thing as above but with the added constraint that it has a rating of 4 or 5            
+    for coffee_data in extended_coffee_data_query:
+        if coffee_data.price >= min_price and coffee_data.price <= max_price and coffee_data.drink_type == coffee_type and (coffee_data.ratings == 4 or coffee_data.ratings == 5):
+                if coffee_data.price < closest_price_rat:
+                    closest_coffee_data_rat = coffee_data
+                    closest_price_rat = coffee_data.price
+ # same thing as above but instead of rating constraint, constraint that it's in proximity to campus (proximity is 1 not 0)               
+    for coffee_data in extended_coffee_data_query:
+        if coffee_data.price >= min_price and coffee_data.price <= max_price and coffee_data.drink_type == coffee_type and coffee_data.proximity == 1:
+                if coffee_data.price < closest_price_prox:
+                    closest_coffee_data_prox = coffee_data
+                    closest_price_prox = coffee_data.price
+# if proximity importance is greater than rating importance, we prioritze that in returning result
+    if proximity_importance > rating_importance:
+        return {
+            'coffee_shop': closest_coffee_data_prox.coffee_shop.name,
+            'item': closest_coffee_data_prox.item.name,
+            'price': closest_coffee_data_prox.price,
+            'location': closest_coffee_data_prox.coffee_shop.location
+        }    
+# if rating importance is greater, we prioritize that instead   
+    if rating_importance > proximity_importance:
+        return {
+            'coffee_shop': closest_coffee_data_rat.coffee_shop.name,
+            'item': closest_coffee_data_rat.item.name,
+            'price': closest_coffee_data_rat.price,
+            'location': closest_coffee_data_rat.coffee_shop.location
+        }     
+# otherwise they must be equal, if greaer than 0 we know it still matters, so we choose the one that yields lower price between the two
+    if rating_importance > 0:
+        if closest_price_rat < closest_price_prox:
+            return {
+            'coffee_shop': closest_coffee_data_rat.coffee_shop.name,
+            'item': closest_coffee_data_rat.item.name,
+            'price': closest_coffee_data_rat.price,
+            'location': closest_coffee_data_rat.coffee_shop.location
+        }    
+        else:
+            return {
+            'coffee_shop': closest_coffee_data_prox.coffee_shop.name,
+            'item': closest_coffee_data_prox.item.name,
+            'price': closest_coffee_data_prox.price,
+            'location': closest_coffee_data_prox.coffee_shop.location
+        }       
+    # otherwise, they are both 0 in importance so we simply choose lowest price coffee
     if closest_coffee_data:
         return {
             'coffee_shop': closest_coffee_data.coffee_shop.name,
@@ -228,8 +302,11 @@ def find_closest_price_coffee(user_desired_price):
     else:
         return None
 
-
-# test
-user_desired_price = 4.5
-closest_coffee = find_closest_price_coffee(user_desired_price)
+#test
+min_price = 1
+max_price = 4
+rating_importance = 0
+proximity_importance = 0
+coffee_type = "Latte"
+closest_coffee = recommended_coffee(min_price, max_price, rating_importance, proximity_importance, coffee_type)
 print(closest_coffee)

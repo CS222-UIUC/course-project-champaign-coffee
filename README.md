@@ -13,10 +13,13 @@ Furthermore, users can rate the coffee and provide site feedback to help improve
 * Classic HTML/CSS/Javascript (frontend)
 
 # Developers
-Danny Kim, Eyad Loutfi, Minhyung Lee, Monica Para
+* Danny Kim (backend/algo implementation)
+* Eyad Loutfi (frontend/algo implementation)
+* Minhyung Lee (database/backend)
+* Monica Para (frontend/web scraping)
 
 # Project Demo
-(GIF demo to be included)
+(recording to be included)
 
 # Installation
 To run the project locally on your machine, make a copy of the repo in your terminal as
@@ -29,6 +32,7 @@ Install any necessary Python libraries and ``flask run`` to run the server local
 # Flask Handles
 * ``/`` - landing page
 * ``/discover`` - questionnaire for coffee selection
+* ``/coffee_shops`` - view all Champaign coffee shops with toggle-able details
 * ``/ratings`` - select coffee shop and give feedback out of 5
 * ``/submit_rating`` - coffee shop review submitted and stored in db
 * ``/feedback`` - allows users to provide feedback on the site in general

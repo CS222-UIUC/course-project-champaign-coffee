@@ -12,7 +12,7 @@ selected responses for each of the assigned categories (results of the questions
 3. Will ask any flavor preference (none, chocolate, ice cream, etc).
 4. Will ask location preference 
 5. Will ask preferred ratings and how much they matter
-6. How much it's proximity to various campus buildings/departments matters.
+6. How much its proximity to various campus buildings/departments matters.
 
 3/22 Notes
 
