@@ -8,16 +8,25 @@
     <title>Champaign Coffee - Coffee Menu</title>
     <script>
         function toggleDetails(id) {
-            const details = document.getElementById(`details-${id}`);
-            const icon = document.getElementById(`icon-${id}`);
-            if (details.style.display === 'none') {
-                details.style.display = 'block';
-                icon.innerText = '-';
-            } else {
-                details.style.display = 'none';
-                icon.innerText = '+';
-            }
-        }
+		      const details = document.getElementById(`details-${id}`);
+				const icon = document.getElementById(`icon-${id}`);
+				if (details.style.display === 'none') {
+				    details.style.display = 'block';
+				    icon.innerText = '-';
+			   } else {
+				    details.style.display = 'none';
+				    icon.innerText = '+';
+		      }
+		  }
+		  function redirectToShop(shop_id) {
+            window.location.href = "{{ url_for('coffee_shops') }}" + "?shop_id=" + shop_id;
+    	  } 
+		  window.addEventListener('DOMContentLoaded', (event) => {
+		      const shop_id = "{{ shop_id }}";
+				if (shop_id) {
+				    toggleDetails(shop_id);
+				}
+		  });
     </script>
 </head>
 <body>
@@ -31,15 +40,15 @@
         <a href="{{ url_for('feedback') }}">Feedback</a>
     </div>
     <center><h2>Browse Coffees</h2></center>
-    <div class="browse_coffees">
+    <div class="coffee-shops">
         {% for item, shops in coffee_items %}
-        <div class="coffee-item">
+        <div class="coffee-shop">
             <h3 onclick="toggleDetails('{{ item.id }}')">{{ item.name }} <span class="expand-icon" id="icon-{{ item.id }}">+</span></h3>
-            <div class="coffee-item-details" id="details-{{ item.id }}" style="display: none;">
+            <div class="coffee-shop-details" id="details-{{ item.id }}" style="display: none;">
                 <h4>Available at:</h4>
                 <ul>
                     {% for shop in shops %}
-                    <li>{{ shop.coffee_shop.name }} - Location: {{ shop.coffee_shop.location }}</li>
+                    <li><a href="{{ url_for('coffee_shops', shop_id=shop.coffee_shop.id) }}" onclick="event.preventDefault(); redirectToShop('{{ shop.coffee_shop.id }}')">{{ shop.coffee_shop.name }}</a> - Location: {{ shop.coffee_shop.location }}</li>
                     {% endfor %}
                 </ul>
             </div>

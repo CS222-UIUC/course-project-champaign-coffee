@@ -9,7 +9,7 @@ app_version = '1.0'
 
 
 @app.route("/")
-def home(): 
+def home():
     """ default server """
     return render_template('index.html')
 
@@ -48,8 +48,8 @@ def coffee_shops():
             'shop': shop,
             'feedbacks': feedbacks
         })
-    
-    return render_template('coffee_shops.html', coffee_shop_details=coffee_shop_details)
+    shop_id = request.args.get('shop_id')
+    return render_template('coffee_shops.html', coffee_shop_details=coffee_shop_details, shop_id=shop_id)
 
 
 @app.route('/browse_coffees')
@@ -57,7 +57,8 @@ def browse_coffees():
     items = session.query(Item).all()
     coffee_items = []
     for item in items:
-        shops = session.query(ExtendedCoffeeData).options(joinedload(ExtendedCoffeeData.coffee_shop)).filter(ExtendedCoffeeData.item_id == item.id).all()
+        shops = session.query(CoffeeData).options(joinedload(
+            CoffeeData.coffee_shop)).filter(CoffeeData.item_id == item.id).all()
         coffee_items.append((item, shops))
 
     return render_template('browse_coffees.html', coffee_items=coffee_items)

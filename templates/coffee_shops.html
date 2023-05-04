@@ -18,6 +18,15 @@
                 icon.innerText = '+';
             }
         }
+		  window.addEventListener('DOMContentLoaded', (event) => {
+				const details = document.querySelectorAll('.coffee-shop-details');
+				details.forEach(detail => {
+					if (detail.getAttribute('expand') === 'true') {
+						const id = detail.id.split('-')[1];
+						toggleDetails(id);
+					}
+				});
+		  });
     </script>
 </head>
 <body>
@@ -32,12 +41,12 @@
 			<a href="{{ url_for('feedback') }}">Feedback</a>
 		</div>
 		<center><h2>All Champaign Coffee Shops</h2></center>
-		<div id="map" style="height: 400px; width: 100%;"></div>
+		<!--<div id="map" style="height: 400px; width: 100%;"></div> -->
 		<div class="coffee-shops">
 			{% for detail in coffee_shop_details %}
 			<div class="coffee-shop">
 					<h3 onclick="toggleDetails('{{ detail.shop.id }}')">{{ detail.shop.name }} <span class="expand-icon" id="icon-{{ detail.shop.id }}">+</span></h3>
-					<div class="coffee-shop-details" id="details-{{ detail.shop.id }}" style="display: none;">
+					<div class="coffee-shop-details" id="details-{{ detail.shop.id }}" style="display: none;" expand="{{ 'true' if detail.shop.id == shop_id|int else 'false' }}">
 						<p>Location: {{ detail.shop.location }}</p>
 						<p>Average Rating: {{ detail.shop.ratings or 'N/A' }}</p>
 						<h4>User Ratings:</h4>
