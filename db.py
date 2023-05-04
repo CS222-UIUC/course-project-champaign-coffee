@@ -46,6 +46,7 @@ class CoffeeShop(Base):
    #  display_name = Column(String)
     ratings = Column(Float, default=0.0)
     ratings_count = Column(Integer, default=0)
+    proximity = Column(Float, default=1.0)
 
    #  def __init__(self, name, location, ratings=0.0, ratings_count=0):
    #      self.name = name
@@ -112,8 +113,9 @@ class ExtendedCoffeeData(Base):
     flavor = Column(String)
     location = Column(String)
     ratings = Column(Float)
-    proximity = Column(Float)
-    coffee_shop = relationship(CoffeeShop, backref='extended_items')
+    proximity = Column(Integer, ForeignKey('coffee_shop.proximity'))
+    coffee_shop = relationship(
+        CoffeeShop, backref='extended_items', foreign_keys=[coffee_shop_id])
     item = relationship(Item)
 
 
@@ -192,12 +194,12 @@ with open('coffee_data/champaign_coffee_menus.csv', encoding="utf-8") as csvfile
             # table for algo
             drink_type = identify_drink_type(csv_item)
             flavor = ''
-            proximity = 0.0
+            proximity = 1.0
             ratings = 0.0
             extended_coffee_data = ExtendedCoffeeData(
                 coffee_shop=coffee_shop, item=item, drink_type=drink_type, price=float(
                     csv_price.strip('$')),
-                flavor=flavor, location=csv_location, ratings=ratings, proximity=proximity)
+                flavor=flavor, location=csv_location, ratings=ratings, proximity=coffee_shop.proximity)
             session.add(extended_coffee_data)
 session.commit()
 
