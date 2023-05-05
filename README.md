@@ -33,6 +33,7 @@ Install any necessary Python libraries and ``flask run`` to run the server local
 * ``/`` - landing page
 * ``/discover`` - questionnaire for coffee selection
 * ``/coffee_shops`` - view all Champaign coffee shops with toggle-able details
+* ``/browse_coffees`` - browse all available items and view which shops offer them
 * ``/ratings`` - select coffee shop and give feedback out of 5
 * ``/submit_rating`` - coffee shop review submitted and stored in db
 * ``/feedback`` - allows users to provide feedback on the site in general
