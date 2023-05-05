@@ -38,4 +38,3 @@ Install any necessary Python libraries and ``flask run`` to run the server local
 * ``/submit_rating`` - coffee shop review submitted and stored in db
 * ``/feedback`` - allows users to provide feedback on the site in general
 * ``/submit-feedback`` - site feedback submitted
-* more handles to be included when finalized
