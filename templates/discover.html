@@ -19,29 +19,29 @@
 		<a href="{{ url_for('ratings') }}">Ratings</a>
 		<a href="{{ url_for('feedback') }}">Feedback</a>
 	</div>
-	
+
     <center><h1>Discover Your Perfect Coffee Match</h1>
 		<h2>Fill Out Our Form!</h2></center>
-		<center><form class = "form-border">
+		<center><form class = "form-border" method="POST" action="{{ url_for('discover') }}">
 			<p>Question 1: Preferred type of coffee? </p>
-			<input type="radio" name="coffee-preference1" value="1">Tea<br>
-			<input type="radio" name="coffee-preference1" value="2">Latte<br>
-			<input type="radio" name="coffee-preference1" value="3">Mocha<br>
-			<input type="radio" name="coffee-preference1" value="4">Espresso<br>
-			<input type="radio" name="coffee-preference1" value="5">Americano<br>
-			<input type="radio" name="coffee-preference1" value="6">Cappucino<br>
-			<input type="radio" name="coffee-preference1" value="7">Macchiato<br>
-			<input type="radio" name="coffee-preference1" value="8">Frappe<br>
-			<input type="radio" name="coffee-preference1" value="9">Other<br>
+			<input type="radio" name="coffee-preference1" value="Tea">Tea<br>
+			<input type="radio" name="coffee-preference1" value="Latte">Latte<br>
+			<input type="radio" name="coffee-preference1" value="Mocha">Mocha<br>
+			<input type="radio" name="coffee-preference1" value="Espresso">Espresso<br>
+			<input type="radio" name="coffee-preference1" value="Americano">Americano<br>
+			<input type="radio" name="coffee-preference1" value="Cappucino">Cappucino<br>
+			<input type="radio" name="coffee-preference1" value="Macchiato">Macchiato<br>
+			<input type="radio" name="coffee-preference1" value="Frappe">Frappe<br>
+			<input type="radio" name="coffee-preference1" value="Other">Other<br>
 			
 			<p>Question 2: What is your desired price? </p>
 			<input type="text" name="min-price" placeholder="Minimum price"><br>
 			<input type="text" name="max-price" placeholder="Maximum price"><br>
 			
 			<p>Question 3: How much does proximity to campus buildings/departments matter?</p>
-			<input type="radio" name="coffee-preference4" value="0">Does not matter<br>
-			<input type="radio" name="coffee-preference4" value="1">Matters a little<br>
-			<input type="radio" name="coffee-preference4" value="2">Matters a lot<br>
+			<input type="radio" name="coffee-preference3" value="0">Does not matter<br>
+			<input type="radio" name="coffee-preference3" value="1">Matters a little<br>
+			<input type="radio" name="coffee-preference3" value="2">Matters a lot<br>
 			
 			<p>Question 4: How much do ratings matter? </p>
 			<input type="radio" name="coffee-preference4" value="0">Does not matter<br>
@@ -50,9 +50,15 @@
 			
 			<br><br>
 			<input type="submit" value="Submit" class = "submit"></center>
-		  </form>
-		 
-		
-
+		  </form>	
+  {% if result %}
+  <div class="coffee-result" style="text-align: center;">
+    <h3>Recommended Coffee:</h3>
+    <p>Coffee Shop: {{ result.coffee_shop }}</p>
+    <p>Item: {{ result.item }}</p>
+    <p>Price: ${{ result.price }}</p>
+    <p>Location: {{ result.location }}</p>
+  </div>
+  {% endif %}
 </body>
 </html>
