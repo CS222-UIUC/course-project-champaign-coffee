@@ -1,6 +1,7 @@
 """ FLASK SERVER FOR WEB APP """
 from flask import Flask, render_template, request, redirect, url_for
-from db import CoffeeShop, Item, CoffeeData, UserFeedback, SiteFeedback, session
+from db import CoffeeShop, Item, CoffeeData, UserFeedback, SiteFeedback, session, ExtendedCoffeeData, recommended_coffee
+from sqlalchemy.orm import joinedload
 import config
 
 app = Flask(__name__)
@@ -8,32 +9,36 @@ app_version = '1.0'
 
 
 @app.route("/")
-def home(): 
+def home():
     """ default server """
     return render_template('index.html')
 
 
-@app.route('/discover')
+@app.route('/discover', methods=['GET', 'POST'])
 def discover():
-   #  price1 = request.form['price1']
-   #  price2 = request.form['price2']
-
-   #  try:
-   #      price1 = float(price1)
-   #      price2 = float(price2)
-   #      rating = float(rating)
-   #  except ValueError:
-   #      return render_template('ratings.html', error="Invalid input for price range.")
-
-   #  if price1 < 0 or price2 < 0:
-   #      return render_template('ratings.html', error="Price range must be non-negative.")
-
-   #  if price1 > price2:
-   #      return render_template('ratings.html', error="Minimum price cannot be greater than maximum price.")
-
-   #   #local testing
-   #  print(f"Price range: {price1}-{price2}")
-    return render_template('discover.html')
+    result = None
+    if request.method == 'POST':
+        print(request.form)
+        if request.form.get('min-price') == '':
+            min_price = 0.0
+        else:
+            min_price = float(request.form.get('min-price'))
+        if request.form.get('max-price') == '':
+            max_price = float('inf')  # float infinity to avoid bugs
+        else:
+            max_price = float(request.form.get('max-price'))
+        rating_importance = int(request.form.get('coffee-preference4', 0))
+        proximity_importance = int(request.form.get('coffee-preference3', 0))
+        coffee_type = str(request.form.get('coffee-preference1', "Tea"))
+        # min_price = 1
+        # max_price = 4
+        # rating_importance = 0
+        # proximity_importance = 0
+        # coffee_type = "Latte"
+        result = recommended_coffee(
+            min_price, max_price, rating_importance, proximity_importance, coffee_type)
+        print(result)
+    return render_template('discover.html', result=result)
 
 
 @app.route('/coffee_shops')
@@ -47,8 +52,20 @@ def coffee_shops():
             'shop': shop,
             'feedbacks': feedbacks
         })
-    
-    return render_template('coffee_shops.html', coffee_shop_details=coffee_shop_details)
+    shop_id = request.args.get('shop_id')
+    return render_template('coffee_shops.html', coffee_shop_details=coffee_shop_details, shop_id=shop_id)
+
+
+@app.route('/browse_coffees')
+def browse_coffees():
+    items = session.query(Item).all()
+    coffee_items = []
+    for item in items:
+        shops = session.query(CoffeeData).options(joinedload(
+            CoffeeData.coffee_shop)).filter(CoffeeData.item_id == item.id).all()
+        coffee_items.append((item, shops))
+
+    return render_template('browse_coffees.html', coffee_items=coffee_items)
 
 
 @app.route('/ratings')
