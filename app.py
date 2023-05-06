@@ -23,7 +23,6 @@ def discover():
             min_price = 0.0
         else:
             min_price = float(request.form.get('min-price'))
-        # max_price = float(request.form.get('max-price', 999))
         if request.form.get('max-price') == '':
             max_price = float('inf')  # float infinity to avoid bugs
         else:
