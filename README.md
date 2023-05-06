@@ -19,7 +19,7 @@ Furthermore, users can rate the coffee and provide site feedback to help improve
 * Monica Para (frontend/web scraping)
 
 # Project Demo
-(recording to be included)
+https://mediaspace.illinois.edu/media/t/1_aipil0f2
 
 # Installation
 To run the project locally on your machine, make a copy of the repo in your terminal as
